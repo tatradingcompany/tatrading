@@ -3,578 +3,74 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TA Trading Company | Complete Irrigation Solutions for Every Green Need</title>
-  <meta name="description" content="TA Trading Company is a professional supplier of irrigation and water-management products in Pathadipalam, Ernakulam, Kerala. Sprinklers, PVC fittings, hoses, solvent cements, and drip irrigation systems.">
+  <title>TA Trading Company | Complete Irrigation Solutions</title>
+  <meta name="description" content="TA Trading Company - Professional supplier of irrigation & water management products in Pathadipalam, Ernakulam, Kerala.">
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <!-- Stylesheets -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/src/style.css">
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="/assets/logo.png">
 </head>
 <body>
 
-  <!-- Top Contact Bar -->
-  <div class="top-bar">
-    <div class="container top-bar-content">
-      <div class="top-info">
-        <span class="info-item">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-          Pathadipalam, Ernakulam, Kerala
-        </span>
-        <span class="info-item">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-          <a href="mailto:info@tatradingcompany.com">info@tatradingcompany.com</a>
-        </span>
-      </div>
-      <div class="top-badges-mini">
-        <span class="mini-tag">🌾 Agriculture</span>
-        <span class="mini-tag">🌴 Plantation</span>
-        <span class="mini-tag">🏡 Gardening</span>
-        <span class="mini-tag">🌳 Landscaping</span>
-      </div>
-    </div>
-  </div>
+  <!-- Background Particle Water Canvas -->
+  <canvas id="waterCanvas" class="hero-canvas"></canvas>
+  <div class="hero-bg-overlay"></div>
 
-  <!-- Header & Navigation -->
-  <header class="main-header" id="mainHeader">
-    <div class="container header-container">
-      <a href="#" class="logo-area">
-        <img src="/assets/logo.png" alt="TA Trading Company Logo" class="logo-img">
-      </a>
-      
-      <!-- Desktop Nav -->
-      <nav class="desktop-nav">
-        <ul>
-          <li><a href="#" class="nav-link active">Home</a></li>
-          <li><a href="#about" class="nav-link">About Us</a></li>
-          <li><a href="#products" class="nav-link">Products Catalog</a></li>
-          <li><a href="#why-choose-us" class="nav-link">Why Choose Us</a></li>
-          <li><a href="#gallery" class="nav-link">Gallery</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-      </nav>
-
-      <div class="header-actions">
-        <a href="tel:+917510671790" class="btn btn-phone">
-          <svg class="icon-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          <span>+91 75106 71790</span>
-        </a>
-        <button class="hamburger-menu" id="menuToggle" aria-label="Toggle Navigation">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-    </div>
-
-    <!-- Mobile Nav Drawer -->
-    <nav class="mobile-nav" id="mobileMenu">
-      <ul>
-        <li><a href="#" class="mobile-link">Home</a></li>
-        <li><a href="#about" class="mobile-link">About Us</a></li>
-        <li><a href="#products" class="mobile-link">Products Catalog</a></li>
-        <li><a href="#why-choose-us" class="mobile-link">Why Choose Us</a></li>
-        <li><a href="#gallery" class="mobile-link">Gallery</a></li>
-        <li><a href="#contact" class="mobile-link">Contact Us</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- 3D Hero Section with Particle Water Canvas -->
-  <section class="hero-section" id="hero">
-    <canvas id="waterCanvas" class="hero-canvas"></canvas>
-    <div class="hero-bg-overlay"></div>
-
-    <div class="container hero-content">
-      <div class="hero-text-area">
-        <div class="hero-pill-badge animate-bounce-soft">
-          <span class="dot-green"></span> Complete Irrigation Solutions
+  <div class="coming-soon-wrapper">
+    <div class="container">
+      <div class="main-card-landing tilt-card">
+        
+        <!-- Header Logo -->
+        <div class="brand-logo-container">
+          <img src="/assets/logo.png" alt="TA Trading Company Logo" class="landing-logo">
         </div>
-        <h1 class="hero-title font-outfit">
+
+        <div class="coming-soon-badge animate-pulse">
+          <span class="badge-dot"></span> Full 3D Interactive Website & Catalog Coming Soon
+        </div>
+
+        <h1 class="landing-title font-outfit">
           Better Irrigation <br>
           <span class="gradient-text">Brighter Tomorrow</span>
         </h1>
-        <p class="hero-tagline">“Complete Irrigation Solutions for Every Green Need.”</p>
-        <p class="hero-subtitle">
-          Professional supplier of irrigation & water-management products, serving agricultural, plantation, gardening, landscaping, and domestic irrigation needs across Kerala.
-        </p>
 
-        <div class="hero-cta-group">
-          <a href="#products" class="btn btn-glow-green">
-            Explore 3D Catalog
-            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
-          <a href="https://wa.me/917510671790?text=Hi%20TA%20Trading%20Company,%20I%20need%20assistance%20with%20irrigation%20products." target="_blank" class="btn btn-whatsapp-hero">
-            <svg class="wa-icon-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984 0 1.764.459 3.487 1.333 5.006l-1.417 5.176 5.297-1.389c1.464.798 3.118 1.218 4.773 1.219h.004c5.505 0 9.988-4.478 9.989-9.985 0-2.669-1.038-5.179-2.925-7.064-1.886-1.887-4.394-2.925-7.064-2.926zm5.882 14.364c-.244.686-1.424 1.31-1.957 1.391-.533.08-1.226.113-3.484-.827-2.894-1.205-4.757-4.148-4.901-4.341-.144-.194-1.168-1.554-1.168-2.964 0-1.41.738-2.103 1.002-2.391.264-.288.577-.361.769-.361.192 0 .385.003.553.01.18.007.421-.068.66.505.245.586.837 2.04.909 2.185.072.144.12.312.024.505-.096.192-.144.312-.288.48-.144.168-.303.375-.433.504-.144.144-.294.302-.126.59.168.288.747 1.233 1.603 1.996 1.101.982 2.031 1.286 2.319 1.43.288.144.456.12.624-.072.168-.192.72-0.84.912-1.129.192-.288.384-.24.648-.144.264.096 1.68.792 1.968.936.288.144.48.216.552.336.072.12.072.696-.172 1.382z"/></svg>
-            WhatsApp Inquiry
-          </a>
-        </div>
-
-        <!-- 5 Sector Badges -->
-        <div class="sector-chips-grid">
-          <div class="sector-chip"><span class="chip-icon">🌾</span> Agriculture</div>
-          <div class="sector-chip"><span class="chip-icon">🌴</span> Plantation</div>
-          <div class="sector-chip"><span class="chip-icon">🏡</span> Gardening</div>
-          <div class="sector-chip"><span class="chip-icon">🌳</span> Landscaping</div>
-          <div class="sector-chip"><span class="chip-icon">🏠</span> Domestic Use</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 4 Brand Positioning Cards -->
-    <div class="container brand-position-wrapper">
-      <div class="brand-grid">
-        <div class="brand-card tilt-card" data-tilt>
-          <div class="brand-icon-box">🛡️</div>
-          <div class="brand-card-info">
-            <h4>Reliable Products</h4>
-            <p>Proven durability for harsh farm environments.</p>
-          </div>
-        </div>
-        <div class="brand-card tilt-card" data-tilt>
-          <div class="brand-icon-box">💧</div>
-          <div class="brand-card-info">
-            <h4>Wide Range</h4>
-            <p>Complete irrigation inventory under one roof.</p>
-          </div>
-        </div>
-        <div class="brand-card tilt-card" data-tilt>
-          <div class="brand-icon-box">🏷️</div>
-          <div class="brand-card-info">
-            <h4>Competitive Pricing</h4>
-            <p>Direct wholesale rates for farmers & contractors.</p>
-          </div>
-        </div>
-        <div class="brand-card tilt-card" data-tilt>
-          <div class="brand-icon-box">👨‍🔧</div>
-          <div class="brand-card-info">
-            <h4>Professional Support</h4>
-            <p>Technical guidance from source to field.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Complete Brochure Product Catalog Section -->
-  <section class="products-section" id="products">
-    <div class="container">
-      <div class="section-header center">
-        <span class="sub-title">Full Brochure Lineup</span>
-        <h2 class="section-title font-outfit">Official Products Catalog</h2>
-        <div class="accent-line"></div>
-        <p class="section-desc">
-          Explore our complete product range featured in the official TA Trading Company brochure. Select a category below or search for specific products.
-        </p>
-      </div>
-
-      <!-- Live Search & Category Filter Controls -->
-      <div class="catalog-controls">
-        <div class="search-box-wrap">
-          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          <input type="text" id="catalogSearch" placeholder="Search sprinklers, fittings, hoses, drippers, solvent..." aria-label="Search catalog">
-          <button id="clearSearch" class="clear-btn" aria-label="Clear Search">&times;</button>
-        </div>
-
-        <div class="category-tabs" id="categoryTabs">
-          <button class="tab-btn active" data-cat="all">All Products (31)</button>
-          <button class="tab-btn" data-cat="sprinklers">💦 Irrigation Sprinklers (10)</button>
-          <button class="tab-btn" data-cat="pvc">🔵 PVC & Solvents (4)</button>
-          <button class="tab-btn" data-cat="hoses">🟢 Garden/Plantation Hoses (8)</button>
-          <button class="tab-btn" data-cat="drip">🌱 Drip Irrigation Systems (9)</button>
-        </div>
-      </div>
-
-      <!-- Product Cards 3D Grid -->
-      <div class="catalog-grid" id="catalogGrid">
-        <!-- Products generated dynamically via JS from official brochure data -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Product Specifications 3D Modal -->
-  <div class="product-modal" id="productModal" aria-hidden="true">
-    <div class="modal-backdrop" id="modalBackdrop"></div>
-    <div class="modal-card-3d">
-      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">&times;</button>
-      <div class="modal-layout">
-        <div class="modal-visual-side">
-          <div class="modal-img-container">
-            <img src="" id="modalProductImg" alt="Product Image" class="modal-product-img">
-            <span class="modal-category-tag" id="modalCategoryTag">Category</span>
-          </div>
-        </div>
-        <div class="modal-details-side">
-          <span class="modal-sub-badge" id="modalSubBadge">Specification</span>
-          <h3 class="modal-product-title font-outfit" id="modalProductTitle">Product Title</h3>
-          <p class="modal-product-tagline" id="modalProductTagline">Tagline</p>
-          <p class="modal-product-desc" id="modalProductDesc">Full description.</p>
-          
-          <div class="modal-specs-box">
-            <h4 class="specs-heading">Key Features & Applications:</h4>
-            <ul class="specs-list" id="modalSpecsList">
-              <!-- Dynamically populated -->
-            </ul>
-          </div>
-
-          <div class="modal-cta-row">
-            <a href="#" target="_blank" id="modalWaBtn" class="btn btn-whatsapp-modal">
-              <svg class="wa-icon-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984 0 1.764.459 3.487 1.333 5.006l-1.417 5.176 5.297-1.389c1.464.798 3.118 1.218 4.773 1.219h.004c5.505 0 9.988-4.478 9.989-9.985 0-2.669-1.038-5.179-2.925-7.064-1.886-1.887-4.394-2.925-7.064-2.926zm5.882 14.364c-.244.686-1.424 1.31-1.957 1.391-.533.08-1.226.113-3.484-.827-2.894-1.205-4.757-4.148-4.901-4.341-.144-.194-1.168-1.554-1.168-2.964 0-1.41.738-2.103 1.002-2.391.264-.288.577-.361.769-.361.192 0 .385.003.553.01.18.007.421-.068.66.505.245.586.837 2.04.909 2.185.072.144.12.312.024.505-.096.192-.144.312-.288.48-.144.168-.303.375-.433.504-.144.144-.294.302-.126.59.168.288.747 1.233 1.603 1.996 1.101.982 2.031 1.286 2.319 1.43.288.144.456.12.624-.072.168-.192.72-0.84.912-1.129.192-.288.384-.24.648-.144.264.096 1.68.792 1.968.936.288.144.48.216.552.336.072.12.072.696-.172 1.382z"/></svg>
-              Enquire on WhatsApp
-            </a>
-            <a href="tel:+917510671790" class="btn btn-call-modal">Call Us</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- About Us Section with Brochure Pillars -->
-  <section class="about-section" id="about">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-visual">
-          <div class="about-card-3d">
-            <img src="/assets/hero_sprinkler.jpg" alt="Agricultural Irrigation System" class="about-img">
-            <div class="floating-stat-box">
-              <span class="stat-number">100%</span>
-              <span class="stat-text">Quality & Precision Water Control</span>
-            </div>
-          </div>
-        </div>
+        <p class="landing-tagline">“Complete Irrigation Solutions for Every Green Need.”</p>
         
-        <div class="about-content-text">
-          <span class="sub-title">About TA Trading Company</span>
-          <h2 class="section-title font-outfit">Your Trusted Supplier in Complete Irrigation Solutions</h2>
-          <div class="accent-line left"></div>
-          <p class="about-p">
-            <strong>TA Trading Company</strong> is a premier supplier of professional-grade irrigation and water-management products located at Pathadipalam, Ernakulam, Kerala. We cater to agriculture, plantations, gardens, commercial landscaping, and residential domestic water systems.
-          </p>
-          <p class="about-p">
-            From precision micro drip systems and rain gun sprinklers to leak-proof PVC fittings, solvent cements, and heavy-duty delivery hoses, we deliver reliable, high-performance equipment designed for efficient water distribution and maximum crop yield.
-          </p>
-          
-          <!-- Brochure Highlights Grid -->
-          <div class="brochure-pillars-grid">
-            <div class="pillar-item">
-              <div class="pillar-icon">💧</div>
-              <div class="pillar-text">
-                <strong>SAVE WATER</strong>
-                <span>Use water efficiently</span>
-              </div>
-            </div>
-            <div class="pillar-item">
-              <div class="pillar-icon">🌱</div>
-              <div class="pillar-text">
-                <strong>HEALTHY CROPS</strong>
-                <span>Better yield & harvest</span>
-              </div>
-            </div>
-            <div class="pillar-item">
-              <div class="pillar-icon">💰</div>
-              <div class="pillar-text">
-                <strong>COST EFFECTIVE</strong>
-                <span>Long term value</span>
-              </div>
-            </div>
-            <div class="pillar-item">
-              <div class="pillar-icon">⚙️</div>
-              <div class="pillar-text">
-                <strong>COMPLETE SOLUTIONS</strong>
-                <span>From source to field</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="tagline-callout font-outfit">
-            "Small Drops, Big Harvests"
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Why Choose Us Section -->
-  <section class="why-section" id="why-choose-us">
-    <div class="container">
-      <div class="section-header center">
-        <span class="sub-title">Our Promise</span>
-        <h2 class="section-title font-outfit">Why Choose TA Trading Company?</h2>
-        <div class="accent-line"></div>
-        <p class="section-desc">We combine premium grade materials with expert technical knowledge to deliver unmatched value to farmers, landscapers, and home owners.</p>
-      </div>
-
-      <div class="why-grid">
-        <div class="why-card tilt-card" data-tilt>
-          <div class="why-icon-box">📦</div>
-          <h3>Wide Product Range</h3>
-          <p>Comprehensive inventory covering sprinklers, drip networks, heavy PVC pipes, solvents, and hoses under one roof.</p>
-        </div>
-        <div class="why-card tilt-card" data-tilt>
-          <div class="why-icon-box">🏅</div>
-          <h3>Quality Assurance</h3>
-          <p>Sourced from certified manufacturers. Every fitting, hose, and nozzle is verified for leak-free, high-pressure operation.</p>
-        </div>
-        <div class="why-card tilt-card" data-tilt>
-          <div class="why-icon-box">🧠</div>
-          <h3>Expert Guidance</h3>
-          <p>Unsure which layout is ideal? Our specialized staff provides professional engineering recommendations for all farm scales.</p>
-        </div>
-        <div class="why-card tilt-card" data-tilt>
-          <div class="why-icon-box">💵</div>
-          <h3>Competitive Pricing</h3>
-          <p>Get premium agricultural and industrial supplies at highly accessible wholesale and retail price points.</p>
-        </div>
-        <div class="why-card tilt-card" data-tilt>
-          <div class="why-icon-box">🤝</div>
-          <h3>Reliable Service</h3>
-          <p>We build long-term customer partnerships. Our after-sales product support is always just a phone call away.</p>
-        </div>
-        <div class="why-card tilt-card" data-tilt>
-          <div class="why-icon-box">🚚</div>
-          <h3>On-Time Delivery</h3>
-          <p>Prompt processing and local transport routing ensure your commercial pipelines and hoses arrive exactly when scheduled.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Gallery Showcase -->
-  <section class="gallery-section" id="gallery">
-    <div class="container">
-      <div class="section-header center">
-        <span class="sub-title">Real World Applications</span>
-        <h2 class="section-title font-outfit">Project Showcase Gallery</h2>
-        <div class="accent-line"></div>
-        <p class="section-desc">See our sprinklers, drip networks, and irrigation pipelines active across farms, tea plantations, and green lawns.</p>
-      </div>
-
-      <div class="gallery-3d-grid">
-        <div class="gallery-card">
-          <img src="/assets/hero_sprinkler.jpg" alt="Agricultural Sprinkler Irrigation" class="gallery-img">
-          <div class="gallery-overlay">
-            <h4>Impact & Rain Gun Sprinklers</h4>
-            <span>Agricultural Fields & Farms</span>
-          </div>
-        </div>
-        <div class="gallery-card">
-          <img src="/assets/sprinklers_category.jpg" alt="Lawn Pop-up Sprinklers" class="gallery-img">
-          <div class="gallery-overlay">
-            <h4>Pop-Up & Rotary Sprinklers</h4>
-            <span>Lawns & Landscaped Gardens</span>
-          </div>
-        </div>
-        <div class="gallery-card">
-          <img src="/assets/drip_irrigation_category.jpg" alt="Drip Irrigation Layout" class="gallery-img">
-          <div class="gallery-overlay">
-            <h4>Micro Drip Irrigation Systems</h4>
-            <span>Nurseries & Greenhouses</span>
-          </div>
-        </div>
-        <div class="gallery-card">
-          <img src="/assets/pipes_fittings_category.jpg" alt="PVC Fittings and Valves" class="gallery-img">
-          <div class="gallery-overlay">
-            <h4>PVC Pipelines & Ball Valves</h4>
-            <span>High-Pressure Water Supply</span>
-          </div>
-        </div>
-        <div class="gallery-card">
-          <img src="/assets/hoses_category.jpg" alt="Plantation Hose Reels" class="gallery-img">
-          <div class="gallery-overlay">
-            <h4>Braided & Jumbo Garden Hoses</h4>
-            <span>Plantations & Domestic Gardens</span>
-          </div>
-        </div>
-        <div class="gallery-card">
-          <img src="/assets/cta_water.jpg" alt="Precision Drip Emitters" class="gallery-img">
-          <div class="gallery-overlay">
-            <h4>Foggers & Misting Systems</h4>
-            <span>Humidity & Temperature Control</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact & Location Section -->
-  <section class="contact-section" id="contact">
-    <div class="container">
-      <div class="section-header center">
-        <span class="sub-title">Get In Touch</span>
-        <h2 class="section-title font-outfit">Contact Us For Price Quotes</h2>
-        <div class="accent-line"></div>
-        <p class="section-desc">Ready to upgrade your irrigation setup? Call us, email us, or send an instant message on WhatsApp.</p>
-      </div>
-
-      <div class="contact-grid">
-        <!-- Contact Info Cards -->
-        <div class="contact-info-column">
-          <div class="info-card-3d">
-            <div class="info-icon">📍</div>
-            <div class="info-details">
-              <h4>Store Location</h4>
-              <p>Pathadipalam, Ernakulam, Kerala - 682024</p>
-            </div>
-          </div>
-
-          <div class="info-card-3d">
-            <div class="info-icon">📞</div>
-            <div class="info-details">
-              <h4>Phone Support</h4>
-              <p><a href="tel:+917510671790" class="contact-link">+91 75106 71790</a></p>
-            </div>
-          </div>
-
-          <div class="info-card-3d">
-            <div class="info-icon">✉️</div>
-            <div class="info-details">
-              <h4>Email Inbox</h4>
-              <p><a href="mailto:info@tatradingcompany.com" class="contact-link">info@tatradingcompany.com</a></p>
-            </div>
-          </div>
-
-          <div class="info-card-3d whatsapp-card">
-            <div class="info-icon wa">💬</div>
-            <div class="info-details">
-              <h4>Direct WhatsApp Support</h4>
-              <p>Chat directly with our product team for catalog & wholesale pricing.</p>
-              <a href="https://wa.me/917510671790?text=Hi%20TA%20Trading%20Company,%20I'm%20interested%20in%20your%20irrigation%20products." target="_blank" class="btn btn-wa-inline">
-                Open WhatsApp Chat
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Contact Form -->
-        <div class="contact-form-card">
-          <h3 class="form-title font-outfit">Send Product Enquiry</h3>
-          <p class="form-subtitle">Fill out this quick form and our technical team will contact you within 24 hours.</p>
-
-          <form id="contactForm" novalidate>
-            <div class="form-group">
-              <label for="formName">Full Name *</label>
-              <input type="text" id="formName" name="name" placeholder="e.g. Rahul Kumar" required>
-              <span class="err-msg">Please enter your name</span>
-            </div>
-
-            <div class="form-row-2">
-              <div class="form-group">
-                <label for="formPhone">Phone Number *</label>
-                <input type="tel" id="formPhone" name="phone" placeholder="e.g. 9876543210" required>
-                <span class="err-msg">Enter valid 10-digit mobile number</span>
-              </div>
-
-              <div class="form-group">
-                <label for="formCategory">Product Interest</label>
-                <select id="formCategory" name="category">
-                  <option value="General Enquiry">General Irrigation Enquiry</option>
-                  <option value="Irrigation Sprinklers">Irrigation Sprinklers</option>
-                  <option value="PVC Fittings & Solvents">PVC Fittings & Solvents</option>
-                  <option value="Garden & Plantation Hoses">Garden & Plantation Hoses</option>
-                  <option value="Drip Irrigation Systems">Drip Irrigation Systems</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="formMessage">Message / Specific Requirements *</label>
-              <textarea id="formMessage" name="message" rows="4" placeholder="Tell us about your farm size, crop type, or required products..." required></textarea>
-              <span class="err-msg">Please type a short message</span>
-            </div>
-
-            <button type="submit" class="btn btn-submit-glow">
-              Submit Enquiry
-              <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-            </button>
-
-            <div class="form-alert-success" id="formSuccessAlert" style="display:none;">
-              ✅ Thank you! Your enquiry has been received. Our team will contact you shortly.
-            </div>
-          </form>
-        </div>
-      </div>
-
-      <!-- Google Map Frame -->
-      <div class="map-wrapper">
-        <h4 class="map-title font-outfit">Visit Our Store in Pathadipalam, Ernakulam</h4>
-        <div class="map-box">
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.7186411986427!2d76.31349077503164!3d10.040058790067644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080c25a0a382d5%3A0x8e82a60df6461a29!2sPathadipalam%2C%20Kalamassery%2C%20Ernakulam%2C%20Kerala!5e0!3m2!1sen!2sin!4v1717820000000!5m2!1sen!2sin" 
-            width="100%" 
-            height="380" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy">
-          </iframe>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Main Footer -->
-  <footer class="main-footer">
-    <div class="container footer-grid">
-      <div class="footer-col brand-col">
-        <img src="/assets/logo.png" alt="TA Trading Company Logo" class="footer-logo">
-        <p class="footer-desc">
-          TA Trading Company is a professional supplier of irrigation and water-management products, serving agricultural, plantation, gardening, landscaping, and domestic irrigation needs.
+        <p class="landing-desc">
+          We specialize in high-efficiency irrigation sprinklers, PVC fittings & solvent cements, garden/plantation hoses, and precision drip irrigation systems in Pathadipalam, Ernakulam, Kerala.
         </p>
-        <p class="footer-motto font-outfit">Grow a Greener Tomorrow 🌿</p>
-      </div>
 
-      <div class="footer-col">
-        <h4 class="footer-heading font-outfit">Brochure Categories</h4>
-        <ul class="footer-links">
-          <li><a href="#products" class="cat-jump" data-cat="sprinklers">Irrigation Sprinklers</a></li>
-          <li><a href="#products" class="cat-jump" data-cat="pvc">PVC Fittings & Solvents</a></li>
-          <li><a href="#products" class="cat-jump" data-cat="hoses">Garden & Plantation Hoses</a></li>
-          <li><a href="#products" class="cat-jump" data-cat="drip">Drip Irrigation Systems</a></li>
-        </ul>
-      </div>
+        <!-- Product Preview Chips -->
+        <div class="landing-products-row">
+          <div class="prod-chip">💧 Irrigation Sprinklers</div>
+          <div class="prod-chip">🔵 PVC Pipes & Fittings</div>
+          <div class="prod-chip">🟢 Plantation & Garden Hoses</div>
+          <div class="prod-chip">🌱 Drip Irrigation Systems</div>
+        </div>
 
-      <div class="footer-col">
-        <h4 class="footer-heading font-outfit">Quick Navigation</h4>
-        <ul class="footer-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#products">Products Catalog</a></li>
-          <li><a href="#why-choose-us">Why Choose Us</a></li>
-          <li><a href="#contact">Contact Support</a></li>
-        </ul>
-      </div>
+        <!-- Contact Action Buttons -->
+        <div class="landing-cta-group">
+          <a href="tel:+917510671790" class="btn btn-phone-large">
+            <svg class="btn-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call +91 75106 71790
+          </a>
+          
+          <a href="https://wa.me/917510671790?text=Hi%20TA%20Trading%20Company,%20I'm%20interested%20in%20your%20irrigation%20products." target="_blank" class="btn btn-wa-large">
+            <svg class="btn-icon-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984 0 1.764.459 3.487 1.333 5.006l-1.417 5.176 5.297-1.389c1.464.798 3.118 1.218 4.773 1.219h.004c5.505 0 9.988-4.478 9.989-9.985 0-2.669-1.038-5.179-2.925-7.064-1.886-1.887-4.394-2.925-7.064-2.926zm5.882 14.364c-.244.686-1.424 1.31-1.957 1.391-.533.08-1.226.113-3.484-.827-2.894-1.205-4.757-4.148-4.901-4.341-.144-.194-1.168-1.554-1.168-2.964 0-1.41.738-2.103 1.002-2.391.264-.288.577-.361.769-.361.192 0 .385.003.553.01.18.007.421-.068.66.505.245.586.837 2.04.909 2.185.072.144.12.312.024.505-.096.192-.144.312-.288.48-.144.168-.303.375-.433.504-.144.144-.294.302-.126.59.168.288.747 1.233 1.603 1.996 1.101.982 2.031 1.286 2.319 1.43.288.144.456.12.624-.072.168-.192.72-0.84.912-1.129.192-.288.384-.24.648-.144.264.096 1.68.792 1.968.936.288.144.48.216.552.336.072.12.072.696-.172 1.382z"/></svg>
+            Enquire on WhatsApp
+          </a>
+        </div>
 
-      <div class="footer-col">
-        <h4 class="footer-heading font-outfit">Direct Contact</h4>
-        <p class="footer-contact-line"><strong>📍 Address:</strong> Pathadipalam, Ernakulam, Kerala</p>
-        <p class="footer-contact-line"><strong>📞 Phone:</strong> <a href="tel:+917510671790">+91 75106 71790</a></p>
-        <p class="footer-contact-line"><strong>✉️ Email:</strong> <a href="mailto:info@tatradingcompany.com">info@tatradingcompany.com</a></p>
-      </div>
-    </div>
+        <!-- Location Footer -->
+        <div class="landing-footer-info">
+          <span>📍 Pathadipalam, Ernakulam, Kerala</span>
+          <span>✉️ info@tatradingcompany.com</span>
+        </div>
 
-    <div class="footer-bottom">
-      <div class="container footer-bottom-flex">
-        <p>&copy; 2026 TA Trading Company. All Rights Reserved.</p>
-        <p>Complete Irrigation Solutions for Every Green Need.</p>
       </div>
     </div>
-  </footer>
-
-  <!-- Floating WhatsApp Button -->
-  <a href="https://wa.me/917510671790?text=Hi%20TA%20Trading%20Company,%20I'm%20interested%20in%20your%20irrigation%20products." class="floating-whatsapp" target="_blank" aria-label="Chat on WhatsApp">
-    <svg class="wa-float-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984 0 1.764.459 3.487 1.333 5.006l-1.417 5.176 5.297-1.389c1.464.798 3.118 1.218 4.773 1.219h.004c5.505 0 9.988-4.478 9.989-9.985 0-2.669-1.038-5.179-2.925-7.064-1.886-1.887-4.394-2.925-7.064-2.926zm5.882 14.364c-.244.686-1.424 1.31-1.957 1.391-.533.08-1.226.113-3.484-.827-2.894-1.205-4.757-4.148-4.901-4.341-.144-.194-1.168-1.554-1.168-2.964 0-1.41.738-2.103 1.002-2.391.264-.288.577-.361.769-.361.192 0 .385.003.553.01.18.007.421-.068.66.505.245.586.837 2.04.909 2.185.072.144.12.312.024.505-.096.192-.144.312-.288.48-.144.168-.303.375-.433.504-.144.144-.294.302-.126.59.168.288.747 1.233 1.603 1.996 1.101.982 2.031 1.286 2.319 1.43.288.144.456.12.624-.072.168-.192.72-0.84.912-1.129.192-.288.384-.24.648-.144.264.096 1.68.792 1.968.936.288.144.48.216.552.336.072.12.072.696-.172 1.382z"/></svg>
-  </a>
-
-  <!-- Mobile Sticky Bottom Action Bar -->
-  <div class="mobile-sticky-bar">
-    <a href="tel:+917510671790" class="sticky-action call">
-      📞 Call +91 75106 71790
-    </a>
-    <a href="https://wa.me/917510671790?text=Hi%20TA%20Trading%20Company,%20I'm%20interested%20in%20your%20products." target="_blank" class="sticky-action wa">
-      💬 WhatsApp Quote
-    </a>
   </div>
 
   <script type="module" src="/src/main.js"></script>
