@@ -1,6 +1,9 @@
 /* ============================================================
-   TA TRADING COMPANY - OFFICIAL BROCHURE & 3D ANIMATED SCRIPT
+   TA TRADING COMPANY - CLEAN MODERN MOBILE-FIRST SCRIPT
+   ALL ENQUIRIES SUBMIT DIRECTLY TO WHATSAPP (+91 75106 71790)
    ============================================================ */
+
+const PHONE_NUMBER = "917510671790";
 
 // 1. COMPLETE OFFICIAL BROCHURE PRODUCT CATALOG DATA (31 ITEMS)
 const brochureProducts = [
@@ -478,120 +481,16 @@ const brochureProducts = [
   }
 ];
 
-// 2. DOM CONTENT LOADED INITIALIZER
+// 2. DOM INITIALIZER
 document.addEventListener("DOMContentLoaded", () => {
-
-  // Initialize Canvas Water Particle Animation
-  initWaterCanvas();
-
-  // Initialize 3D Card Tilt Engine
-  init3DTiltEngine();
-
-  // Populate Products Catalog Grid
   renderCatalogGrid(brochureProducts);
-
-  // Initialize Search & Filter Controls
   initSearchAndFilters();
-
-  // Initialize Modal Window Logic
   initProductModal();
-
-  // Initialize Mobile Menu & Scroll Logic
   initHeaderAndMobileNav();
-
-  // Initialize Contact Form Validation
-  initContactForm();
+  initWhatsAppContactForm();
 });
 
-// 3. CANVAS WATER PARTICLE ANIMATION ENGINE (3D / Dynamic Drops)
-function initWaterCanvas() {
-  const canvas = document.getElementById("waterCanvas");
-  if (!canvas) return;
-
-  const ctx = canvas.getContext("2d");
-  let width = (canvas.width = window.innerWidth);
-  let height = (canvas.height = canvas.parentElement.offsetHeight || 600);
-
-  window.addEventListener("resize", () => {
-    width = canvas.width = window.innerWidth;
-    height = canvas.height = canvas.parentElement.offsetHeight || 600;
-  });
-
-  // Particle class representing water drops and rising bubbles
-  class WaterDrop {
-    constructor() {
-      this.reset();
-    }
-    reset() {
-      this.x = Math.random() * width;
-      this.y = Math.random() * height;
-      this.size = Math.random() * 3 + 1;
-      this.speedY = Math.random() * 1.5 + 0.5;
-      this.speedX = (Math.random() - 0.5) * 0.4;
-      this.opacity = Math.random() * 0.5 + 0.2;
-    }
-    update() {
-      this.y += this.speedY;
-      this.x += this.speedX;
-
-      if (this.y > height) {
-        this.y = 0;
-        this.x = Math.random() * width;
-      }
-    }
-    draw() {
-      ctx.beginPath();
-      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(165, 243, 183, ${this.opacity})`;
-      ctx.fill();
-    }
-  }
-
-  const drops = Array.from({ length: 65 }, () => new WaterDrop());
-
-  function animate() {
-    ctx.clearRect(0, 0, width, height);
-    drops.forEach((d) => {
-      d.update();
-      d.draw();
-    });
-    requestAnimationFrame(animate);
-  }
-
-  animate();
-}
-
-// 4. 3D TILT ENGINE FOR CARDS & PANELS
-function init3DTiltEngine() {
-  document.addEventListener("mousemove", (e) => {
-    const tiltCards = document.querySelectorAll(".tilt-card");
-    const mouseX = e.clientX;
-    const mouseY = e.clientY;
-
-    tiltCards.forEach((card) => {
-      const rect = card.getBoundingClientRect();
-      // Check if mouse is near or over card
-      if (
-        mouseX >= rect.left - 50 &&
-        mouseX <= rect.right + 50 &&
-        mouseY >= rect.top - 50 &&
-        mouseY <= rect.bottom + 50
-      ) {
-        const cardCenterX = rect.left + rect.width / 2;
-        const cardCenterY = rect.top + rect.height / 2;
-
-        const rotateX = (mouseY - cardCenterY) / 12;
-        const rotateY = (cardCenterX - mouseX) / 12;
-
-        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
-      } else {
-        card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
-      }
-    });
-  });
-}
-
-// 5. RENDER CATALOG GRID WITH BROCHURE PRODUCTS
+// 3. RENDER CATALOG GRID WITH DIRECT WHATSAPP BUTTONS FOR ALL 31 PRODUCTS
 function renderCatalogGrid(products) {
   const grid = document.getElementById("catalogGrid");
   if (!grid) return;
@@ -611,14 +510,14 @@ function renderCatalogGrid(products) {
 
   products.forEach((prod) => {
     const card = document.createElement("div");
-    card.className = "catalog-card tilt-card";
+    card.className = "catalog-card";
     card.setAttribute("data-id", prod.id);
     card.setAttribute("data-category", prod.category);
 
     const waMsg = encodeURIComponent(
-      `Hi TA Trading Company, I am interested in purchasing/getting a price quote for "${prod.title}" (${prod.subtitle}) from your official catalog. Please provide details.`
+      `Hi TA Trading Company,\n\nI am interested in getting a price quote / details for:\n📌 *${prod.title}* (${prod.subtitle})\nCategory: ${prod.category.toUpperCase()}\n\nPlease share price quote and availability.`
     );
-    const waUrl = `https://wa.me/917510671790?text=${waMsg}`;
+    const waUrl = `https://wa.me/${PHONE_NUMBER}?text=${waMsg}`;
 
     card.innerHTML = `
       <div class="card-image-wrapper">
@@ -632,11 +531,10 @@ function renderCatalogGrid(products) {
         
         <div class="card-actions-row">
           <button class="btn btn-specs-view" data-id="${prod.id}">
-            👁️ View Specs
+            📋 Details
           </button>
           <a href="${waUrl}" target="_blank" class="btn btn-wa-card" aria-label="Enquire on WhatsApp">
-            <svg class="wa-icon-mini" viewBox="0 0 24 24" fill="currentColor"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984 0 1.764.459 3.487 1.333 5.006l-1.417 5.176 5.297-1.389c1.464.798 3.118 1.218 4.773 1.219h.004c5.505 0 9.988-4.478 9.989-9.985 0-2.669-1.038-5.179-2.925-7.064-1.886-1.887-4.394-2.925-7.064-2.926zm5.882 14.364c-.244.686-1.424 1.31-1.957 1.391-.533.08-1.226.113-3.484-.827-2.894-1.205-4.757-4.148-4.901-4.341-.144-.194-1.168-1.554-1.168-2.964 0-1.41.738-2.103 1.002-2.391.264-.288.577-.361.769-.361.192 0 .385.003.553.01.18.007.421-.068.66.505.245.586.837 2.04.909 2.185.072.144.12.312.024.505-.096.192-.144.312-.288.48-.144.168-.303.375-.433.504-.144.144-.294.302-.126.59.168.288.747 1.233 1.603 1.996 1.101.982 2.031 1.286 2.319 1.43.288.144.456.12.624-.072.168-.192.72-0.84.912-1.129.192-.288.384-.24.648-.144.264.096 1.68.792 1.968.936.288.144.48.216.552.336.072.12.072.696-.172 1.382z"/></svg>
-            Enquire
+            💬 WhatsApp
           </a>
         </div>
       </div>
@@ -645,7 +543,7 @@ function renderCatalogGrid(products) {
     grid.appendChild(card);
   });
 
-  // Attach click listener for "View Specs" button & card click
+  // Attach button event handlers
   document.querySelectorAll(".btn-specs-view").forEach((btn) => {
     btn.addEventListener("click", (e) => {
       e.stopPropagation();
@@ -662,7 +560,7 @@ function renderCatalogGrid(products) {
   });
 }
 
-// 6. SEARCH & FILTER CONTROLS
+// 4. SEARCH & FILTER CONTROLS
 function initSearchAndFilters() {
   const searchInput = document.getElementById("catalogSearch");
   const clearBtn = document.getElementById("clearSearch");
@@ -720,11 +618,9 @@ function initSearchAndFilters() {
 
   // Footer Category Jump
   document.querySelectorAll(".cat-jump").forEach((link) => {
-    link.addEventListener("click", (e) => {
+    link.addEventListener("click", () => {
       const targetCat = link.getAttribute("data-cat");
-      const matchingTab = document.querySelector(
-        `.tab-btn[data-cat="${targetCat}"]`
-      );
+      const matchingTab = document.querySelector(`.tab-btn[data-cat="${targetCat}"]`);
       if (matchingTab) {
         matchingTab.click();
       }
@@ -732,7 +628,7 @@ function initSearchAndFilters() {
   });
 }
 
-// 7. 3D PRODUCT SPECIFICATION MODAL LOGIC
+// 5. PRODUCT SPECIFICATION MODAL
 function openProductModal(productId) {
   const prod = brochureProducts.find((p) => p.id === productId);
   if (!prod) return;
@@ -757,7 +653,6 @@ function openProductModal(productId) {
   tagline.textContent = prod.subtitle;
   desc.textContent = prod.desc;
 
-  // Build specs list
   specsList.innerHTML = "";
   prod.specs.forEach((spec) => {
     const li = document.createElement("li");
@@ -765,13 +660,11 @@ function openProductModal(productId) {
     specsList.appendChild(li);
   });
 
-  // Set WhatsApp button link
   const waMsg = encodeURIComponent(
-    `Hi TA Trading Company, I am interested in purchasing/getting a price quote for "${prod.title}" (${prod.subtitle}) from your official brochure. Please share details and pricing.`
+    `Hi TA Trading Company,\n\nI am interested in purchasing / price quote for:\n📌 *${prod.title}* (${prod.subtitle})\nCategory: ${prod.category.toUpperCase()}\n\nPlease share details and pricing.`
   );
-  waBtn.href = `https://wa.me/917510671790?text=${waMsg}`;
+  waBtn.href = `https://wa.me/${PHONE_NUMBER}?text=${waMsg}`;
 
-  // Open modal
   modal.classList.add("active");
   document.body.style.overflow = "hidden";
 }
@@ -796,7 +689,7 @@ function initProductModal() {
   });
 }
 
-// 8. HEADER & MOBILE NAVIGATION
+// 6. HEADER & MOBILE NAV
 function initHeaderAndMobileNav() {
   const header = document.getElementById("mainHeader");
   const menuToggle = document.getElementById("menuToggle");
@@ -826,10 +719,9 @@ function initHeaderAndMobileNav() {
   }
 }
 
-// 9. CONTACT FORM VALIDATION & SUBMISSION
-function initContactForm() {
+// 7. CONTACT FORM DIRECT SUBMISSION TO WHATSAPP (+91 75106 71790)
+function initWhatsAppContactForm() {
   const form = document.getElementById("contactForm");
-  const alertSuccess = document.getElementById("formSuccessAlert");
 
   if (!form) return;
 
@@ -838,6 +730,7 @@ function initContactForm() {
 
     const nameInput = document.getElementById("formName");
     const phoneInput = document.getElementById("formPhone");
+    const categorySelect = document.getElementById("formCategory");
     const msgInput = document.getElementById("formMessage");
 
     let isValid = true;
@@ -865,24 +758,30 @@ function initContactForm() {
     }
 
     if (isValid) {
-      const submitBtn = form.querySelector(".btn-submit-glow");
-      const originalText = submitBtn.innerHTML;
+      const name = nameInput.value.trim();
+      const phone = phoneInput.value.trim();
+      const category = categorySelect.value;
+      const userMsg = msgInput.value.trim();
 
-      submitBtn.disabled = true;
-      submitBtn.innerHTML = "Sending Enquiry...";
+      const textMessage = 
+`Hi TA Trading Company,
 
-      setTimeout(() => {
-        form.reset();
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = originalText;
+I would like to submit a product enquiry:
 
-        if (alertSuccess) {
-          alertSuccess.style.display = "block";
-          setTimeout(() => {
-            alertSuccess.style.display = "none";
-          }, 7000);
-        }
-      }, 1200);
+👤 *Name*: ${name}
+📞 *Phone*: ${phone}
+🏷️ *Product Interest*: ${category}
+💬 *Message*: ${userMsg}
+
+Please send catalog pricing and product availability.`;
+
+      const whatsappUrl = `https://wa.me/${PHONE_NUMBER}?text=${encodeURIComponent(textMessage)}`;
+
+      // Open WhatsApp directly
+      window.open(whatsappUrl, "_blank");
+
+      // Reset Form
+      form.reset();
     }
   });
 }

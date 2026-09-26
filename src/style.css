@@ -1,8 +1,8 @@
 /* ============================================================
-   TA TRADING COMPANY - 3D ANIMATED & STUNNING STYLING SYSTEM
+   TA TRADING COMPANY - CLEAN MODERN CORPORATE STYLING SYSTEM
    ============================================================ */
 
-/* 1. TOKENS & DESIGN SYSTEM */
+/* 1. DESIGN TOKENS */
 :root {
   --primary-blue: #0b5c8c;
   --primary-blue-dark: #073a5a;
@@ -20,16 +20,16 @@
   --font-heading: 'Outfit', sans-serif;
   --font-body: 'Inter', sans-serif;
 
-  --shadow-3d-sm: 0 6px 16px rgba(11, 92, 140, 0.08);
-  --shadow-3d-md: 0 12px 32px rgba(11, 92, 140, 0.12), 0 2px 6px rgba(42, 138, 61, 0.08);
-  --shadow-3d-lg: 0 20px 50px rgba(7, 58, 90, 0.22), 0 8px 16px rgba(42, 138, 61, 0.15);
+  --shadow-sm: 0 4px 12px rgba(11, 92, 140, 0.06);
+  --shadow-md: 0 8px 24px rgba(11, 92, 140, 0.1);
+  --shadow-lg: 0 16px 40px rgba(7, 58, 90, 0.15);
   
   --radius-sm: 8px;
   --radius-md: 16px;
   --radius-lg: 24px;
   --radius-pill: 50px;
 
-  --transition-smooth: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --transition-smooth: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 /* 2. BASE RESET */
@@ -109,23 +109,23 @@ img {
 .btn-glow-green {
   background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green-bright) 100%);
   color: var(--white);
-  box-shadow: 0 8px 24px rgba(42, 138, 61, 0.35);
+  box-shadow: 0 6px 20px rgba(42, 138, 61, 0.3);
 }
 
 .btn-glow-green:hover {
-  transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 12px 30px rgba(42, 138, 61, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(42, 138, 61, 0.45);
 }
 
 .btn-whatsapp-hero {
   background: linear-gradient(135deg, var(--whatsapp-color) 0%, var(--whatsapp-dark) 100%);
   color: var(--white);
-  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
 }
 
 .btn-whatsapp-hero:hover {
-  transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.45);
 }
 
 .btn-phone {
@@ -137,7 +137,6 @@ img {
 
 .btn-phone:hover {
   background-color: var(--primary-green-bright);
-  transform: scale(1.03);
 }
 
 .btn-arrow {
@@ -199,7 +198,7 @@ img {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(255, 255, 255, 0.94);
+  background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(12px);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   padding: 14px 0;
@@ -334,10 +333,10 @@ img {
   color: var(--dark-navy);
 }
 
-/* 5. 3D HERO SECTION */
+/* 5. HERO SECTION */
 .hero-section {
   position: relative;
-  min-height: 88vh;
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -347,23 +346,13 @@ img {
   background-color: var(--dark-navy);
 }
 
-.hero-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  pointer-events: none;
-}
-
 .hero-bg-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(8, 40, 62, 0.92) 0%, rgba(11, 92, 140, 0.82) 100%),
+  background: linear-gradient(135deg, rgba(8, 40, 62, 0.92) 0%, rgba(11, 92, 140, 0.84) 100%),
               url('/assets/hero_sprinkler.jpg') center/cover no-repeat;
   z-index: 0;
 }
@@ -451,12 +440,6 @@ img {
   display: flex;
   align-items: center;
   gap: 6px;
-  transition: var(--transition-smooth);
-}
-
-.sector-chip:hover {
-  background: rgba(42, 138, 61, 0.5);
-  transform: translateY(-2px);
 }
 
 /* Brand Positioning Cards Row */
@@ -473,21 +456,20 @@ img {
 }
 
 .brand-card {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(16px);
+  background: rgba(255, 255, 255, 0.96);
   padding: 24px;
   border-radius: var(--radius-md);
-  box-shadow: var(--shadow-3d-md);
+  box-shadow: var(--shadow-md);
   display: flex;
   align-items: flex-start;
   gap: 16px;
   border: 1px solid rgba(11, 92, 140, 0.1);
-  transform-style: preserve-3d;
-  transition: transform 0.15s ease-out, box-shadow 0.35s ease;
+  transition: var(--transition-smooth);
 }
 
 .brand-card:hover {
-  box-shadow: var(--shadow-3d-lg);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
   border-color: var(--primary-green);
 }
 
@@ -508,7 +490,57 @@ img {
   line-height: 1.4;
 }
 
-/* 6. PRODUCTS CATALOG SECTION & CONTROLS */
+/* 6. BROCHURE VIEWER SECTION */
+.brochure-section {
+  padding: 80px 0;
+  background-color: var(--white);
+}
+
+.brochure-viewer-card {
+  background: var(--light-bg);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(11, 92, 140, 0.1);
+  text-align: center;
+}
+
+.brochure-poster-img {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  margin: 0 auto 24px auto;
+  transition: var(--transition-smooth);
+}
+
+.brochure-poster-img:hover {
+  transform: scale(1.01);
+}
+
+.brochure-download-bar {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn-download {
+  background-color: var(--primary-blue);
+  color: var(--white);
+  border-radius: var(--radius-pill);
+  padding: 12px 24px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.btn-download:hover {
+  background-color: var(--primary-blue-dark);
+}
+
+/* 7. PRODUCTS CATALOG SECTION & CONTROLS */
 .products-section {
   padding: 100px 0;
   background-color: var(--light-bg);
@@ -586,7 +618,7 @@ img {
   background-color: var(--white);
   font-family: var(--font-body);
   font-size: 1rem;
-  box-shadow: var(--shadow-3d-sm);
+  box-shadow: var(--shadow-sm);
   transition: var(--transition-smooth);
 }
 
@@ -628,7 +660,7 @@ img {
   font-size: 0.9rem;
   cursor: pointer;
   transition: var(--transition-smooth);
-  box-shadow: var(--shadow-3d-sm);
+  box-shadow: var(--shadow-sm);
 }
 
 .tab-btn:hover,
@@ -636,10 +668,10 @@ img {
   background-color: var(--primary-blue);
   color: var(--white);
   border-color: var(--primary-blue);
-  box-shadow: 0 6px 18px rgba(11, 92, 140, 0.3);
+  box-shadow: 0 6px 18px rgba(11, 92, 140, 0.25);
 }
 
-/* 3D CATALOG GRID & CARDS */
+/* CATALOG GRID & CARDS */
 .catalog-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -650,17 +682,17 @@ img {
   background: var(--white);
   border-radius: var(--radius-md);
   overflow: hidden;
-  box-shadow: var(--shadow-3d-md);
+  box-shadow: var(--shadow-md);
   border: 1px solid rgba(11, 92, 140, 0.08);
   display: flex;
   flex-direction: column;
   cursor: pointer;
-  transform-style: preserve-3d;
-  transition: transform 0.15s ease-out, box-shadow 0.35s ease;
+  transition: var(--transition-smooth);
 }
 
 .catalog-card:hover {
-  box-shadow: var(--shadow-3d-lg);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
   border-color: var(--primary-green);
 }
 
@@ -679,15 +711,14 @@ img {
 }
 
 .catalog-card:hover .card-product-img {
-  transform: scale(1.08);
+  transform: scale(1.06);
 }
 
 .card-tag-badge {
   position: absolute;
   top: 12px;
   right: 12px;
-  background: rgba(42, 138, 61, 0.9);
-  backdrop-filter: blur(6px);
+  background: rgba(42, 138, 61, 0.95);
   color: var(--white);
   padding: 4px 12px;
   border-radius: var(--radius-pill);
@@ -770,15 +801,9 @@ img {
 
 .btn-wa-card:hover {
   background-color: var(--whatsapp-dark);
-  transform: translateY(-2px);
 }
 
-.wa-icon-mini {
-  width: 14px;
-  height: 14px;
-}
-
-/* 7. 3D SPECIFICATION MODAL */
+/* 8. SPECIFICATION MODAL */
 .product-modal {
   position: fixed;
   top: 0;
@@ -807,10 +832,10 @@ img {
   width: 100%;
   height: 100%;
   background: rgba(8, 40, 62, 0.75);
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(6px);
 }
 
-.modal-card-3d {
+.modal-card {
   position: relative;
   z-index: 10;
   background: var(--white);
@@ -818,15 +843,9 @@ img {
   max-width: 840px;
   border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: var(--shadow-3d-lg);
-  transform: scale(0.9) rotateX(10deg);
-  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: var(--shadow-lg);
   max-height: 90vh;
   overflow-y: auto;
-}
-
-.product-modal.active .modal-card-3d {
-  transform: scale(1) rotateX(0deg);
 }
 
 .modal-close-btn {
@@ -981,7 +1000,7 @@ img {
   text-align: center;
 }
 
-/* 8. ABOUT US SECTION */
+/* 9. ABOUT US & WHY CHOOSE US */
 .about-section {
   padding: 100px 0;
 }
@@ -993,11 +1012,11 @@ img {
   align-items: center;
 }
 
-.about-card-3d {
+.about-card {
   position: relative;
   border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: var(--shadow-3d-lg);
+  box-shadow: var(--shadow-lg);
 }
 
 .about-img {
@@ -1010,8 +1029,8 @@ img {
   position: absolute;
   bottom: 20px;
   right: 20px;
-  background: rgba(8, 40, 62, 0.9);
-  backdrop-filter: blur(12px);
+  background: rgba(8, 40, 62, 0.92);
+  backdrop-filter: blur(10px);
   color: var(--white);
   padding: 20px 28px;
   border-radius: var(--radius-md);
@@ -1081,7 +1100,7 @@ img {
   margin-top: 20px;
 }
 
-/* 9. WHY CHOOSE US & GALLERY */
+/* WHY CHOOSE US */
 .why-section {
   padding: 100px 0;
   background-color: var(--light-bg);
@@ -1097,14 +1116,14 @@ img {
   background: var(--white);
   padding: 32px;
   border-radius: var(--radius-md);
-  box-shadow: var(--shadow-3d-sm);
+  box-shadow: var(--shadow-sm);
   border-top: 4px solid var(--primary-blue);
-  transform-style: preserve-3d;
-  transition: transform 0.15s ease-out, box-shadow 0.35s ease;
+  transition: var(--transition-smooth);
 }
 
 .why-card:hover {
-  box-shadow: var(--shadow-3d-lg);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
   border-top-color: var(--primary-green);
 }
 
@@ -1123,66 +1142,7 @@ img {
   color: var(--muted-text);
 }
 
-/* GALLERY 3D GRID */
-.gallery-section {
-  padding: 100px 0;
-}
-
-.gallery-3d-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 24px;
-}
-
-.gallery-card {
-  position: relative;
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  box-shadow: var(--shadow-3d-md);
-  height: 250px;
-}
-
-.gallery-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.6s ease;
-}
-
-.gallery-card:hover .gallery-img {
-  transform: scale(1.1);
-}
-
-.gallery-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to top, rgba(8, 40, 62, 0.9) 0%, transparent 100%);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 20px;
-  opacity: 0;
-  transition: var(--transition-smooth);
-}
-
-.gallery-card:hover .gallery-overlay {
-  opacity: 1;
-}
-
-.gallery-overlay h4 {
-  color: var(--white);
-  font-size: 1.1rem;
-}
-
-.gallery-overlay span {
-  color: #a5f3b7;
-  font-size: 0.8rem;
-}
-
-/* 10. CONTACT SECTION & MAP */
+/* 10. CONTACT SECTION & WHATSAPP FORM */
 .contact-section {
   padding: 100px 0;
   background-color: var(--light-bg);
@@ -1195,11 +1155,11 @@ img {
   margin-bottom: 60px;
 }
 
-.info-card-3d {
+.info-card {
   background: var(--white);
   padding: 24px;
   border-radius: var(--radius-md);
-  box-shadow: var(--shadow-3d-sm);
+  box-shadow: var(--shadow-sm);
   display: flex;
   align-items: center;
   gap: 16px;
@@ -1246,7 +1206,7 @@ img {
   background: var(--white);
   padding: 40px;
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-3d-md);
+  box-shadow: var(--shadow-md);
 }
 
 .form-title {
@@ -1314,30 +1274,28 @@ img {
   display: block;
 }
 
-.btn-submit-glow {
+.btn-submit-wa {
   width: 100%;
-  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 100%);
+  background: linear-gradient(135deg, var(--whatsapp-color) 0%, var(--whatsapp-dark) 100%);
   color: var(--white);
   padding: 14px;
   border-radius: var(--radius-pill);
   font-size: 1rem;
-  box-shadow: 0 8px 20px rgba(11, 92, 140, 0.3);
+  font-family: var(--font-heading);
+  font-weight: 800;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: var(--transition-smooth);
 }
 
-.btn-submit-glow:hover {
+.btn-submit-wa:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 25px rgba(11, 92, 140, 0.45);
-}
-
-.form-alert-success {
-  background: var(--accent-light-mint);
-  color: var(--primary-green);
-  padding: 14px;
-  border-radius: var(--radius-sm);
-  margin-top: 16px;
-  text-align: center;
-  font-weight: 700;
-  font-size: 0.9rem;
+  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.5);
 }
 
 /* Map Frame */
@@ -1353,7 +1311,7 @@ img {
 .map-box {
   border-radius: var(--radius-md);
   overflow: hidden;
-  box-shadow: var(--shadow-3d-md);
+  box-shadow: var(--shadow-md);
 }
 
 /* 11. FOOTER */
@@ -1454,7 +1412,7 @@ img {
 }
 
 .floating-whatsapp:hover {
-  transform: scale(1.12) rotate(8deg);
+  transform: scale(1.12);
 }
 
 .wa-float-icon {
