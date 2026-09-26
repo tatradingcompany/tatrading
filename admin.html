@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard - TA TRADING COMPANY</title>
+  <link rel="stylesheet" href="/src/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body class="admin-body">
+
+  <nav class="navbar admin-navbar">
+    <div class="container nav-container">
+      <a href="/" class="brand-logo">
+        <span class="brand-name"><i class="fas fa-shield-alt"></i> TA TRADING ADMIN</span>
+      </a>
+      <a href="/" class="btn btn-outline"><i class="fas fa-globe"></i> View Live Site</a>
+    </div>
+  </nav>
+
+  <div class="container admin-container">
+    <!-- Login Screen -->
+    <div id="login-card" class="admin-card login-card">
+      <h2><i class="fas fa-lock"></i> Admin Login</h2>
+      <p>Enter administrative credentials to manage products and images.</p>
+      <form id="login-form">
+        <div class="form-group">
+          <label>Username</label>
+          <input type="text" id="username" class="form-control" placeholder="Enter username" required />
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" id="password" class="form-control" placeholder="Enter password" required />
+        </div>
+        <div id="login-error" class="alert-error hide">Invalid Username or Password!</div>
+        <button type="submit" class="btn btn-primary w-100"><i class="fas fa-sign-in-alt"></i> Login to Dashboard</button>
+      </form>
+    </div>
+
+    <!-- Admin Dashboard Panel -->
+    <div id="dashboard-panel" class="hide">
+      <div class="admin-header-bar" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+        <h2>Product Catalog & Image Manager</h2>
+        <button id="btn-logout" class="btn btn-secondary"><i class="fas fa-sign-out-alt"></i> Logout</button>
+      </div>
+
+      <div class="admin-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
+        <!-- Update Image Form -->
+        <div class="admin-card">
+          <h3><i class="fas fa-image"></i> Update Product Image</h3>
+          <form id="update-image-form">
+            <div class="form-group">
+              <label>Select Product</label>
+              <select id="select-product" class="form-control" required></select>
+            </div>
+            <div class="form-group">
+              <label>New Image URL</label>
+              <input type="text" id="image-url" class="form-control" placeholder="https://example.com/image.jpg" />
+            </div>
+            <div class="form-group">
+              <label>OR Upload Image File</label>
+              <input type="file" id="image-file" class="form-control" accept="image/*" />
+            </div>
+            <button type="submit" class="btn btn-primary w-100"><i class="fas fa-save"></i> Save Image Update</button>
+          </form>
+        </div>
+
+        <!-- Add New Product Form -->
+        <div class="admin-card">
+          <h3><i class="fas fa-plus-circle"></i> Add New Product</h3>
+          <form id="add-product-form">
+            <div class="form-group">
+              <label>Product Name</label>
+              <input type="text" id="new-name" class="form-control" required placeholder="e.g. 2 Inch Brass Nozzle" />
+            </div>
+            <div class="form-group">
+              <label>Category</label>
+              <select id="new-category" class="form-control" required>
+                <option value="Sprinklers">Sprinklers</option>
+                <option value="PVC & Solvents">PVC & Solvents</option>
+                <option value="Hoses">Hoses</option>
+                <option value="Drip Irrigation">Drip Irrigation</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Subtitle / Usage</label>
+              <input type="text" id="new-subtitle" class="form-control" placeholder="Short description" />
+            </div>
+            <div class="form-group">
+              <label>Image URL</label>
+              <input type="text" id="new-image" class="form-control" placeholder="/assets/hero_sprinkler.jpg" />
+            </div>
+            <button type="submit" class="btn btn-gold w-100"><i class="fas fa-plus"></i> Add Product to Catalog</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module">
+    import { getCatalog, saveCatalog } from '/src/main.js';
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const loginCard = document.getElementById('login-card');
+      const dashboardPanel = document.getElementById('dashboard-panel');
+      const loginForm = document.getElementById('login-form');
+      const loginError = document.getElementById('login-error');
+      const selectProduct = document.getElementById('select-product');
+
+      function checkAuth() {
+        if (sessionStorage.getItem('ta_admin_logged') === 'true') {
+          loginCard.classList.add('hide');
+          dashboardPanel.classList.remove('hide');
+          populateSelect();
+        } else {
+          loginCard.classList.remove('hide');
+          dashboardPanel.classList.add('hide');
+        }
+      }
+
+      loginForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const user = document.getElementById('username').value.trim();
+        const pass = document.getElementById('password').value.trim();
+
+        if (user === 'taadmin' && pass === 'ta@admin#') {
+          sessionStorage.setItem('ta_admin_logged', 'true');
+          loginError.classList.add('hide');
+          checkAuth();
+        } else {
+          loginError.classList.remove('hide');
+        }
+      });
+
+      document.getElementById('btn-logout').addEventListener('click', () => {
+        sessionStorage.removeItem('ta_admin_logged');
+        checkAuth();
+      });
+
+      function populateSelect() {
+        const catalog = getCatalog();
+        selectProduct.innerHTML = catalog.map(p => `<option value="${p.id}">${p.name} (${p.category})</option>`).join('');
+      }
+
+      document.getElementById('update-image-form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const id = parseInt(selectProduct.value);
+        const url = document.getElementById('image-url').value.trim();
+        const fileInput = document.getElementById('image-file');
+        
+        const catalog = getCatalog();
+        const item = catalog.find(p => p.id === id);
+
+        if (fileInput.files && fileInput.files[0]) {
+          const reader = new FileReader();
+          reader.onload = function(evt) {
+            item.image = evt.target.result;
+            saveCatalog(catalog);
+            alert('Image updated successfully via File Upload!');
+          };
+          reader.readAsDataURL(fileInput.files[0]);
+        } else if (url) {
+          item.image = url;
+          saveCatalog(catalog);
+          alert('Image URL updated successfully!');
+        } else {
+          alert('Please enter an image URL or choose a file.');
+        }
+      });
+
+      checkAuth();
+    });
+  </script>
+</body>
+</html>

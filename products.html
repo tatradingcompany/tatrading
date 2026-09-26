@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Catalog - TA TRADING COMPANY</title>
+  <link rel="stylesheet" href="/src/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="/" class="brand-logo">
+        <img src="/assets/logo.png" alt="TA TRADING COMPANY Logo" class="logo-img" />
+        <span class="brand-name">TA TRADING COMPANY</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/products.html" class="active">Products Catalog</a></li>
+        <li><a href="/#about">About Us</a></li>
+      </ul>
+      <a href="https://wa.me/917510671790" target="_blank" class="btn btn-whatsapp nav-wa-btn">
+        <i class="fab fa-whatsapp"></i> WhatsApp Us
+      </a>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <div class="page-header" style="background: #1b5e20; color: white; padding: 40px 0; text-align: center;">
+    <div class="container">
+      <h1>Our Complete Product Catalog</h1>
+      <p>Browse 31+ agricultural sprinklers, PVC adhesives, layflat hoses, and drip irrigation accessories.</p>
+    </div>
+  </div>
+
+  <!-- Search & Filter Bar -->
+  <section class="section catalog-section">
+    <div class="container">
+      <div class="filter-controls">
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input type="text" id="search-input" placeholder="Search products, sprinklers, hoses..." />
+        </div>
+        <div class="category-tabs">
+          <button class="tab-btn active" data-cat="all">All Products</button>
+          <button class="tab-btn" data-cat="Sprinklers">Sprinklers</button>
+          <button class="tab-btn" data-cat="PVC & Solvents">PVC & Solvents</button>
+          <button class="tab-btn" data-cat="Hoses">Hoses</button>
+          <button class="tab-btn" data-cat="Drip Irrigation">Drip Irrigation</button>
+        </div>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="products-grid" id="full-products-grid">
+        <!-- Rendered via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Brochure Section (JUST ABOVE FOOTER) -->
+  <section class="section brochure-banner-section">
+    <div class="container brochure-card">
+      <div class="brochure-content">
+        <img src="/assets/TA Final 1.png" alt="TA Trading Product Brochure" class="brochure-thumb" />
+        <div class="brochure-text">
+          <h3>Download Complete Product Brochure</h3>
+          <p>Get our complete offline catalog featuring detailed technical specifications for all 31 irrigation products.</p>
+        </div>
+      </div>
+      <div class="brochure-action">
+        <a href="/assets/TA Final 1.png" download="TA_Trading_Company_Brochure.png" class="btn btn-gold">
+          <i class="fas fa-download"></i> Download Brochure
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h3>TA TRADING COMPANY</h3>
+        <p>Your dependable partner for modern agricultural irrigation systems, sprinklers, solvents, and durable hose fittings.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/products.html">All Products</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <p><i class="fas fa-phone-alt"></i> Phone: +91 751 067 1790</p>
+        <p><i class="fab fa-whatsapp"></i> WhatsApp: +91 75106 71790</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-flex">
+        <p>&copy; 2026 TA TRADING COMPANY. All Rights Reserved.</p>
+        <a href="/admin.html" class="admin-lock-link" title="Admin Login"><i class="fas fa-lock"></i> Admin Login</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module">
+    import { getCatalog, sendWhatsAppEnquiry } from '/src/main.js';
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const catalog = getCatalog();
+      const grid = document.getElementById('full-products-grid');
+      const searchInput = document.getElementById('search-input');
+      const tabBtns = document.querySelectorAll('.tab-btn');
+
+      let currentCategory = 'all';
+
+      function render() {
+        const query = searchInput.value.toLowerCase().trim();
+        const filtered = catalog.filter(item => {
+          const matchCat = currentCategory === 'all' || item.category === currentCategory;
+          const matchQuery = item.name.toLowerCase().includes(query) || 
+                             item.subtitle.toLowerCase().includes(query) ||
+                             item.category.toLowerCase().includes(query);
+          return matchCat && matchQuery;
+        });
+
+        if (filtered.length === 0) {
+          grid.innerHTML = `<div class="no-results" style="grid-column: 1/-1; text-align: center; padding: 40px;"><i class="fas fa-info-circle"></i> No products found matching your search.</div>`;
+          return;
+        }
+
+        grid.innerHTML = filtered.map(item => `
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <img src="${item.image}" alt="${item.name}" class="product-img" onerror="this.src='/assets/sprinklers_category.jpg'" />
+              <span class="category-badge">${item.category}</span>
+            </div>
+            <div class="product-body">
+              <h3>${item.name}</h3>
+              <p class="product-subtitle">${item.subtitle}</p>
+              <ul class="specs-preview">
+                ${item.specs.map(s => `<li><i class="fas fa-check"></i> ${s}</li>`).join('')}
+              </ul>
+              <button class="btn btn-whatsapp w-100 btn-enquire-wa" data-name="${item.name}">
+                <i class="fab fa-whatsapp"></i> Enquire on WhatsApp
+              </button>
+            </div>
+          </div>
+        `).join('');
+
+        document.querySelectorAll('.btn-enquire-wa').forEach(btn => {
+          btn.addEventListener('click', (e) => {
+            const name = e.currentTarget.getAttribute('data-name');
+            sendWhatsAppEnquiry(name);
+          });
+        });
+      }
+
+      tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          tabBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          currentCategory = btn.getAttribute('data-cat');
+          render();
+        });
+      });
+
+      searchInput.addEventListener('input', render);
+      render();
+    });
+  </script>
+</body>
+</html>
