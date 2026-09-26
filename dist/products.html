@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Complete Product Catalog | TA TRADING COMPANY</title>
   <meta name="description" content="Browse our complete 31+ irrigation catalog including brass sprinklers, PVC solvent cements, HDPE pipes, flexible hoses, and drip irrigation systems." />
-  <link rel="stylesheet" href="/src/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script type="module" crossorigin src="/assets/products-DsX4Dw1I.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/main-C1oS_Kib.js">
+  <link rel="stylesheet" crossorigin href="/assets/main-DgFRHCHr.css">
 </head>
 <body>
 
@@ -222,98 +224,5 @@
     </div>
   </div>
 
-  <script type="module">
-    import { getCatalog, sendWhatsAppEnquiry, initMobileNav } from '/src/main.js';
-
-    document.addEventListener('DOMContentLoaded', () => {
-      initMobileNav();
-
-      const catalog = getCatalog();
-      const grid = document.getElementById('catalog-grid');
-      const searchInput = document.getElementById('catalog-search');
-      const catButtons = document.querySelectorAll('.cat-btn');
-      const noResults = document.getElementById('no-results-state');
-
-      // Update Counts
-      document.getElementById('count-all').textContent = catalog.length;
-      document.getElementById('count-sprinklers').textContent = catalog.filter(p => p.category === 'Sprinklers').length;
-      document.getElementById('count-pvc').textContent = catalog.filter(p => p.category === 'PVC & Solvents').length;
-      document.getElementById('count-hoses').textContent = catalog.filter(p => p.category === 'Hoses').length;
-      document.getElementById('count-drip').textContent = catalog.filter(p => p.category === 'Drip Irrigation').length;
-
-      let selectedCategory = 'all';
-
-      function renderCatalog() {
-        const query = searchInput.value.toLowerCase().trim();
-        const filtered = catalog.filter(item => {
-          const matchCat = selectedCategory === 'all' || item.category === selectedCategory;
-          const matchQuery = !query || 
-                             item.name.toLowerCase().includes(query) ||
-                             item.subtitle.toLowerCase().includes(query) ||
-                             item.category.toLowerCase().includes(query) ||
-                             (item.specs && item.specs.some(s => s.toLowerCase().includes(query)));
-          return matchCat && matchQuery;
-        });
-
-        if (filtered.length === 0) {
-          grid.innerHTML = '';
-          noResults.style.display = 'block';
-          return;
-        }
-
-        noResults.style.display = 'none';
-        grid.innerHTML = filtered.map(product => `
-          <div class="product-card">
-            <div class="product-thumb-wrap">
-              <img src="${product.image}" alt="${product.name}" class="product-thumb" onerror="this.src='/assets/sprinklers_category.jpg'" />
-              <span class="product-badge-cat">${product.category}</span>
-            </div>
-            <div class="product-content">
-              <h3 class="product-title">${product.name}</h3>
-              <div class="product-subtitle">${product.subtitle}</div>
-              <ul class="product-specs-list">
-                ${product.specs.slice(0, 3).map(spec => `
-                  <li><i class="fas fa-check"></i> <span>${spec}</span></li>
-                `).join('')}
-              </ul>
-              <div class="product-card-footer">
-                <button class="btn btn-whatsapp w-100 btn-enquire" data-name="${product.name}">
-                  <i class="fab fa-whatsapp"></i> Enquire on WhatsApp
-                </button>
-              </div>
-            </div>
-          </div>
-        `).join('');
-
-        document.querySelectorAll('.btn-enquire').forEach(btn => {
-          btn.addEventListener('click', (e) => {
-            const name = e.currentTarget.getAttribute('data-name');
-            sendWhatsAppEnquiry(name);
-          });
-        });
-      }
-
-      catButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-          catButtons.forEach(b => b.classList.remove('active'));
-          btn.classList.add('active');
-          selectedCategory = btn.getAttribute('data-category');
-          renderCatalog();
-        });
-      });
-
-      searchInput.addEventListener('input', renderCatalog);
-
-      document.getElementById('btn-reset-filter').addEventListener('click', () => {
-        searchInput.value = '';
-        selectedCategory = 'all';
-        catButtons.forEach(b => b.classList.remove('active'));
-        catButtons[0].classList.add('active');
-        renderCatalog();
-      });
-
-      renderCatalog();
-    });
-  </script>
 </body>
 </html>
