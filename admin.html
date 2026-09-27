@@ -139,10 +139,10 @@
             <div class="form-group">
               <label>Category</label>
               <select id="add-category" class="form-control" required>
-                <option value="Sprinklers">Sprinklers</option>
-                <option value="PVC & Solvents">PVC & Solvents</option>
-                <option value="Hoses">Hoses</option>
-                <option value="Drip Irrigation">Drip Irrigation</option>
+                <option value="Irrigation Sprinklers">Irrigation Sprinklers</option>
+                <option value="PVC Fittings & Accessories">PVC Fittings & Accessories</option>
+                <option value="Garden & Plantation Hoses">Garden & Plantation Hoses</option>
+                <option value="Drip Irrigation Systems">Drip Irrigation Systems</option>
               </select>
             </div>
 
@@ -260,7 +260,7 @@
 
         // Update Stats
         document.getElementById('stat-total').textContent = catalog.length;
-        document.getElementById('stat-sprinklers').textContent = catalog.filter(p => p.category === 'Sprinklers').length;
+        document.getElementById('stat-sprinklers').textContent = catalog.filter(p => p.category === 'Irrigation Sprinklers').length;
 
         // Populate Select Dropdown
         selectProduct.innerHTML = catalog.map(p => `
@@ -369,7 +369,7 @@
           subtitle,
           image,
           specs,
-          featured: category === 'Sprinklers'
+          featured: category === 'Irrigation Sprinklers'
         };
 
         catalog.push(newProduct);

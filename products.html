@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Complete Product Catalog | TA TRADING COMPANY</title>
-  <meta name="description" content="Browse our complete 31+ irrigation catalog including brass sprinklers, PVC solvent cements, HDPE pipes, flexible hoses, and drip irrigation systems." />
+  <title>Official Product Catalog | TA TRADING COMPANY</title>
+  <meta name="description" content="Browse our official 39-product irrigation catalog: Irrigation Sprinklers, PVC Fittings & Accessories, Garden & Plantation Hoses, and Drip Irrigation Systems." />
   <link rel="stylesheet" href="/src/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
@@ -17,7 +17,7 @@
         <img src="/assets/logo.png" alt="TA TRADING COMPANY" class="logo-img" />
         <div class="brand-text">
           <span class="brand-name">TA TRADING COMPANY</span>
-          <span class="brand-tagline">Irrigation & Agricultural Solutions</span>
+          <span class="brand-tagline">Complete Irrigation Solutions for Every Green Need</span>
         </div>
       </a>
 
@@ -26,13 +26,13 @@
         <li><a href="/" class="nav-link">Home</a></li>
         <li><a href="/products.html" class="nav-link active">Products Catalog</a></li>
         <li><a href="/#about" class="nav-link">About Us</a></li>
-        <li><a href="#brochure" class="nav-link">Brochure</a></li>
+        <li><a href="#brochure" class="nav-link">Official Catalog</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
 
       <!-- Action Buttons -->
       <div class="nav-actions">
-        <a href="https://wa.me/917510671790" target="_blank" class="btn btn-whatsapp nav-wa-btn">
+        <a href="https://wa.me/917510671790?text=Hello%20TA%20TRADING%20COMPANY,%20I%20am%20enquiring%20about%20your%20products." target="_blank" class="btn btn-whatsapp nav-wa-btn">
           <i class="fab fa-whatsapp"></i> WhatsApp Us
         </a>
         <button class="nav-hamburger" id="nav-hamburger-btn" aria-label="Toggle Navigation">
@@ -45,11 +45,18 @@
   <!-- Page Header -->
   <div style="background: linear-gradient(135deg, #07381c 0%, #0d532b 100%); color: white; padding: 50px 0 45px; border-bottom: 1px solid rgba(255,255,255,0.1);">
     <div class="container" style="text-align: center;">
-      <span style="color: #f59e0b; font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; display: inline-block; margin-bottom: 8px;">Wholesale Agricultural Catalog</span>
+      <span style="color: #f59e0b; font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; display: inline-block; margin-bottom: 8px;">Official Product Catalog • 39 Irrigation Solutions</span>
       <h1 style="color: white; font-size: 2.6rem; margin-bottom: 12px;">Explore All Irrigation Products</h1>
-      <p style="color: #cbd5e1; max-width: 650px; margin: 0 auto; font-size: 1.05rem;">
-        Complete inventory of agricultural sprinklers, solvent cements, flexible hoses, layflat discharge lines, and precision drip irrigation networks.
+      <p style="color: #cbd5e1; max-width: 700px; margin: 0 auto; font-size: 1.05rem;">
+        Complete wholesale inventory of Irrigation Sprinklers, PVC Pressure Fittings & Solvents, Flexible Garden & Plantation Hoses, and Precision Drip Irrigation Systems.
       </p>
+      <div style="margin-top: 18px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+        <span style="background: rgba(255,255,255,0.12); padding: 5px 14px; border-radius: 20px; font-size: 0.85rem;"><i class="fas fa-check-circle" style="color: #4ade80;"></i> Agriculture</span>
+        <span style="background: rgba(255,255,255,0.12); padding: 5px 14px; border-radius: 20px; font-size: 0.85rem;"><i class="fas fa-check-circle" style="color: #4ade80;"></i> Plantation</span>
+        <span style="background: rgba(255,255,255,0.12); padding: 5px 14px; border-radius: 20px; font-size: 0.85rem;"><i class="fas fa-check-circle" style="color: #4ade80;"></i> Gardening</span>
+        <span style="background: rgba(255,255,255,0.12); padding: 5px 14px; border-radius: 20px; font-size: 0.85rem;"><i class="fas fa-check-circle" style="color: #4ade80;"></i> Landscaping</span>
+        <span style="background: rgba(255,255,255,0.12); padding: 5px 14px; border-radius: 20px; font-size: 0.85rem;"><i class="fas fa-check-circle" style="color: #4ade80;"></i> Domestic Use</span>
+      </div>
     </div>
   </div>
 
@@ -61,24 +68,24 @@
       <div class="catalog-toolbar">
         <div class="search-bar-wrap">
           <i class="fas fa-search"></i>
-          <input type="text" id="catalog-search" class="search-input" placeholder="Search by product name, category, or specifications (e.g., Brass, 1 Inch, Hose, Drip)..." />
+          <input type="text" id="catalog-search" class="search-input" placeholder="Search product name, category, or specifications (e.g., Rain Gun, Solvent, Braided, Dripper)..." />
         </div>
 
         <div class="category-filter-list">
           <button class="cat-btn active" data-category="all">
             <i class="fas fa-boxes"></i> All Products (<span id="count-all">0</span>)
           </button>
-          <button class="cat-btn" data-category="Sprinklers">
-            <i class="fas fa-tint"></i> Sprinklers (<span id="count-sprinklers">0</span>)
+          <button class="cat-btn" data-category="Irrigation Sprinklers">
+            <i class="fas fa-tint"></i> Irrigation Sprinklers (<span id="count-sprinklers">0</span>)
           </button>
-          <button class="cat-btn" data-category="PVC & Solvents">
-            <i class="fas fa-tools"></i> PVC & Solvents (<span id="count-pvc">0</span>)
+          <button class="cat-btn" data-category="PVC Fittings & Accessories">
+            <i class="fas fa-tools"></i> PVC Fittings & Accessories (<span id="count-pvc">0</span>)
           </button>
-          <button class="cat-btn" data-category="Hoses">
-            <i class="fas fa-water"></i> Hoses (<span id="count-hoses">0</span>)
+          <button class="cat-btn" data-category="Garden & Plantation Hoses">
+            <i class="fas fa-water"></i> Garden & Plantation Hoses (<span id="count-hoses">0</span>)
           </button>
-          <button class="cat-btn" data-category="Drip Irrigation">
-            <i class="fas fa-seedling"></i> Drip Irrigation (<span id="count-drip">0</span>)
+          <button class="cat-btn" data-category="Drip Irrigation Systems">
+            <i class="fas fa-seedling"></i> Drip Irrigation Systems (<span id="count-drip">0</span>)
           </button>
         </div>
       </div>
@@ -99,54 +106,40 @@
     </div>
   </section>
 
-  <!-- BROCHURE SECTION (JUST ABOVE FOOTER) -->
+  <!-- OFFICIAL BROCHURE SECTION (JUST ABOVE FOOTER) -->
   <section id="brochure" class="brochure-section">
     <div class="container">
       <div class="brochure-banner-grid">
         <div class="brochure-text-col">
-          <span style="color: #f59e0b; font-weight: 700; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.08em; display: inline-block; margin-bottom: 8px;">Official Product Catalog</span>
-          <h2>Download Complete Product Brochure</h2>
+          <span style="color: #f59e0b; font-weight: 700; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.08em; display: inline-block; margin-bottom: 8px;">Official Product Catalog • Source of Truth</span>
+          <h2>TA TRADING COMPANY Catalog</h2>
           <p>
-            Get our complete offline catalog featuring detailed technical specifications, nozzle sizes, pressure charts, and connection types for all 31 irrigation products.
+            Complete irrigation hardware overview covering heavy-duty impact sprinklers, rain guns, PVC solvent cements, suction/delivery hoses, and precision drip irrigation systems.
           </p>
           <ul class="brochure-features-list">
-            <li><i class="fas fa-check-circle"></i> Complete Sprinkler & Rain Gun Specifications</li>
-            <li><i class="fas fa-check-circle"></i> PVC Solvent Cements & Pressure Pipe Dimensions</li>
-            <li><i class="fas fa-check-circle"></i> Layflat Hoses & Heavy Duty Suction Lines</li>
-            <li><i class="fas fa-check-circle"></i> Drip Irrigation, Emitters & Mainline Water Filters</li>
+            <li><i class="fas fa-check-circle"></i> <strong>Irrigation Sprinklers:</strong> Winkler, Butterfly, Pop-up, Rotary, Rain Gun, Micro, Mist & Fogger</li>
+            <li><i class="fas fa-check-circle"></i> <strong>PVC Fittings:</strong> Elbows, Tees, Couplers, Unions, Reducers, Valves & Bulldog Solvent</li>
+            <li><i class="fas fa-check-circle"></i> <strong>Hoses:</strong> Garden, Braided, Jumbo, Spray, Drip, Suction, Delivery & Flat Layflat</li>
+            <li><i class="fas fa-check-circle"></i> <strong>Drip Systems:</strong> Drip pipes, Button Drippers, Inline Laterals, Valves, Filters & Saddles</li>
           </ul>
-          <div style="display: flex; gap: 14px; flex-wrap: wrap;">
-            <a href="/assets/TA Final 1.png" download="TA_Trading_Brochure_Page1.png" class="btn btn-gold">
-              <i class="fas fa-download"></i> Download Brochure
+          <div style="display: flex; gap: 14px; flex-wrap: wrap; margin-top: 20px;">
+            <a href="/assets/ta_trading_catalog.jpg" download="TA_Trading_Company_Catalog.jpg" class="btn btn-gold">
+              <i class="fas fa-download"></i> Download Official Catalog
             </a>
-            <a href="https://wa.me/917510671790?text=Please%20send%20me%20the%20complete%20PDF%20brochure%20and%20price%20list." target="_blank" class="btn btn-whatsapp">
-              <i class="fab fa-whatsapp"></i> Request PDF on WhatsApp
+            <a href="https://wa.me/917510671790?text=Please%20send%20me%20the%20complete%20catalog%20and%20wholesale%20price%20list." target="_blank" class="btn btn-whatsapp">
+              <i class="fab fa-whatsapp"></i> Request on WhatsApp
             </a>
           </div>
         </div>
 
-        <!-- 5 Brochure Page Previews -->
-        <div class="brochure-gallery">
-          <div class="brochure-page-thumb" onclick="window.open('/assets/TA Final 1.png', '_blank')">
-            <img src="/assets/TA Final 1.png" alt="Brochure Page 1" />
-            <span>Page 1</span>
-          </div>
-          <div class="brochure-page-thumb" onclick="window.open('/assets/TA Final 2.png', '_blank')">
-            <img src="/assets/TA Final 2.png" alt="Brochure Page 2" />
-            <span>Page 2</span>
-          </div>
-          <div class="brochure-page-thumb" onclick="window.open('/assets/TA Final 3.png', '_blank')">
-            <img src="/assets/TA Final 3.png" alt="Brochure Page 3" />
-            <span>Page 3</span>
-          </div>
-          <div class="brochure-page-thumb" onclick="window.open('/assets/TA Final 4.png', '_blank')">
-            <img src="/assets/TA Final 4.png" alt="Brochure Page 4" />
-            <span>Page 4</span>
-          </div>
-          <div class="brochure-page-thumb" onclick="window.open('/assets/TA Final 5.png', '_blank')">
-            <img src="/assets/TA Final 5.png" alt="Brochure Page 5" />
-            <span>Page 5</span>
-          </div>
+        <!-- Official Catalog Poster Preview -->
+        <div style="text-align: center;">
+          <a href="/assets/ta_trading_catalog.jpg" target="_blank" style="display: block; position: relative; border-radius: var(--radius); overflow: hidden; box-shadow: 0 16px 36px rgba(0,0,0,0.3); border: 3px solid rgba(255,255,255,0.2);">
+            <img src="/assets/ta_trading_catalog.jpg" alt="TA Trading Official Catalog" style="width: 100%; max-width: 440px; display: block; border-radius: var(--radius);" />
+            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.85)); color: white; padding: 16px; font-weight: 600; font-size: 0.95rem;">
+              <i class="fas fa-search-plus"></i> Click to View Full Size Catalog
+            </div>
+          </a>
         </div>
       </div>
     </div>
@@ -157,21 +150,25 @@
     <div class="container footer-grid">
       <div class="footer-col">
         <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 16px;">
-          <img src="/assets/logo.png" alt="Logo" style="height: 42px; background: white; padding: 4px; border-radius: 6px;" />
+          <img src="/assets/logo.png" alt="TA TRADING COMPANY" style="height: 44px; background: white; padding: 4px; border-radius: 6px;" />
           <h3 style="margin-bottom: 0;">TA TRADING COMPANY</h3>
         </div>
-        <p>
-          Your dependable partner for commercial and agricultural irrigation systems, brass sprinklers, rain guns, PVC solvent cements, and durable hoses.
+        <p style="color: #94a3b8; font-size: 0.95rem; line-height: 1.6;">
+          Complete Irrigation Solutions for Every Green Need. Premium supplier of commercial sprinklers, rain guns, PVC solvent cements, high-pressure spray hoses, and precision drip irrigation systems across Kerala & South India.
         </p>
+        <div style="margin-top: 14px; color: #4ade80; font-weight: 600; font-size: 0.9rem;">
+          <i class="fas fa-leaf"></i> Better Irrigation, Brighter Tomorrow
+        </div>
       </div>
 
       <div class="footer-col">
-        <h4>Navigation</h4>
+        <h4>Product Categories</h4>
         <ul class="footer-links">
-          <li><a href="/">Home</a></li>
-          <li><a href="/products.html">All Products</a></li>
-          <li><a href="/#about">About Us</a></li>
-          <li><a href="#brochure">Brochure Download</a></li>
+          <li><a href="/products.html">Irrigation Sprinklers</a></li>
+          <li><a href="/products.html">PVC Fittings & Accessories</a></li>
+          <li><a href="/products.html">Garden & Plantation Hoses</a></li>
+          <li><a href="/products.html">Drip Irrigation Systems</a></li>
+          <li><a href="#brochure">Official Catalog Download</a></li>
         </ul>
       </div>
 
@@ -179,7 +176,7 @@
         <h4>Direct Contact</h4>
         <div class="footer-contact-item">
           <i class="fas fa-phone-alt"></i>
-          <span>+91 751 067 1790</span>
+          <span><strong>+91 75106 71790</strong> (Call Now)</span>
         </div>
         <div class="footer-contact-item">
           <i class="fab fa-whatsapp"></i>
@@ -187,7 +184,11 @@
         </div>
         <div class="footer-contact-item">
           <i class="fas fa-envelope"></i>
-          <span>tatradingcompany1790@gmail.com</span>
+          <span>info@tatradingcompany.com</span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Pathadipalam, Ernakulam, Kerala</span>
         </div>
       </div>
     </div>
@@ -195,7 +196,7 @@
     <!-- Footer Bottom with Lock Icon -->
     <div class="footer-bottom">
       <div class="container footer-bottom-flex">
-        <p>&copy; 2026 TA TRADING COMPANY. All Rights Reserved.</p>
+        <p>&copy; 2026 TA TRADING COMPANY. Grow a Greener Tomorrow. All Rights Reserved.</p>
         
         <!-- Lock Icon for Admin Login -->
         <a href="/admin.html" class="admin-lock-link" title="Admin Login">
@@ -206,7 +207,7 @@
   </footer>
 
   <!-- Floating WhatsApp Widget -->
-  <a href="https://wa.me/917510671790" target="_blank" class="floating-whatsapp" title="Chat on WhatsApp">
+  <a href="https://wa.me/917510671790?text=Hello%20TA%20TRADING%20COMPANY,%20I%20would%20like%20to%20enquire%20about%20your%20products." target="_blank" class="floating-whatsapp" title="Chat on WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
 
@@ -216,7 +217,7 @@
       <a href="tel:+917510671790" class="btn btn-secondary w-100 btn-sm">
         <i class="fas fa-phone-alt"></i> Call Now
       </a>
-      <a href="https://wa.me/917510671790" target="_blank" class="btn btn-whatsapp w-100 btn-sm">
+      <a href="https://wa.me/917510671790?text=Hello%20TA%20TRADING%20COMPANY,%20I%20would%20like%20to%20enquire%20about%20your%20products." target="_blank" class="btn btn-whatsapp w-100 btn-sm">
         <i class="fab fa-whatsapp"></i> WhatsApp Us
       </a>
     </div>
@@ -236,10 +237,10 @@
 
       // Update Counts
       document.getElementById('count-all').textContent = catalog.length;
-      document.getElementById('count-sprinklers').textContent = catalog.filter(p => p.category === 'Sprinklers').length;
-      document.getElementById('count-pvc').textContent = catalog.filter(p => p.category === 'PVC & Solvents').length;
-      document.getElementById('count-hoses').textContent = catalog.filter(p => p.category === 'Hoses').length;
-      document.getElementById('count-drip').textContent = catalog.filter(p => p.category === 'Drip Irrigation').length;
+      document.getElementById('count-sprinklers').textContent = catalog.filter(p => p.category === 'Irrigation Sprinklers').length;
+      document.getElementById('count-pvc').textContent = catalog.filter(p => p.category === 'PVC Fittings & Accessories').length;
+      document.getElementById('count-hoses').textContent = catalog.filter(p => p.category === 'Garden & Plantation Hoses').length;
+      document.getElementById('count-drip').textContent = catalog.filter(p => p.category === 'Drip Irrigation Systems').length;
 
       let selectedCategory = 'all';
 
@@ -265,15 +266,16 @@
         grid.innerHTML = filtered.map(product => `
           <div class="product-card">
             <div class="product-thumb-wrap">
-              <img src="${product.image}" alt="${product.name}" class="product-thumb" onerror="this.src='/assets/sprinklers_category.jpg'" />
+              <img src="${product.image}" alt="${product.name}" class="product-thumb" loading="lazy" onerror="this.src='/assets/sprinklers_showcase.jpg'" />
               <span class="product-badge-cat">${product.category}</span>
             </div>
             <div class="product-content">
               <h3 class="product-title">${product.name}</h3>
               <div class="product-subtitle">${product.subtitle}</div>
+              <p style="font-size: 0.85rem; color: #475569; margin-bottom: 12px; line-height: 1.45;">${product.description}</p>
               <ul class="product-specs-list">
                 ${product.specs.slice(0, 3).map(spec => `
-                  <li><i class="fas fa-check"></i> <span>${spec}</span></li>
+                  <li><i class="fas fa-check-circle" style="color: var(--primary);"></i> <span>${spec}</span></li>
                 `).join('')}
               </ul>
               <div class="product-card-footer">
