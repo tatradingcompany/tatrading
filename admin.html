@@ -359,7 +359,7 @@
         const specsRaw = document.getElementById('add-specs').value.trim();
         const image = document.getElementById('add-image').value.trim() || '/assets/hero_sprinkler.jpg';
 
-        const specs = specsRaw.split(',').map(s => s.trim()).filter(s => s.length > 0);
+        const features = specsRaw.split(',').map(s => s.trim()).filter(s => s.length > 0);
 
         const newId = catalog.reduce((max, p) => Math.max(max, p.id || 0), 0) + 1;
         const newProduct = {
@@ -368,7 +368,7 @@
           category,
           subtitle,
           image,
-          specs,
+          features,
           featured: category === 'Irrigation Sprinklers'
         };
 

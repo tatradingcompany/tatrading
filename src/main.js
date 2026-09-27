@@ -1,9 +1,9 @@
 // TA TRADING COMPANY - Core Catalog & Interactive Controller
 // Source of Truth: Official TA Trading Reference Catalog
+// Updated: Dedicated authentic product photography & clean application-focused highlights (zero dimensions)
 
-const STORAGE_KEY = 'ta_products_catalog_v3';
+const STORAGE_KEY = 'ta_products_catalog_v4';
 
-// 39 Products categorized strictly from the official TA Trading Reference Catalog
 export const defaultBrochureProducts = [
   // ==========================================
   // 1. IRRIGATION SPRINKLERS (10 Products)
@@ -12,100 +12,100 @@ export const defaultBrochureProducts = [
     id: 1,
     name: 'Winkler / Impact Sprinkler',
     category: 'Irrigation Sprinklers',
-    subtitle: 'Impact Type • Heavy Duty for Agriculture & Large Areas',
-    image: '/assets/sprinklers_showcase.jpg',
-    description: 'Heavy-duty impact sprinkler engineered for agricultural crop fields, plantations, and wide acreage. Features robust spring-driven rotation, corrosion-resistant body, and uniform precipitation.',
-    specs: ['Inlet Size: 1" & 3/4" BSP Male', 'Coverage: 18 - 32 meters radius', 'Pressure Range: 2.5 - 5.0 Bar', 'Application: Agriculture, Large Open Farms & Plantations'],
+    subtitle: 'Impact Type • Heavy duty, ideal for agriculture and large areas',
+    image: '/assets/prod_winkler.jpg',
+    description: 'Heavy-duty impact sprinkler engineered for agricultural crop fields, plantations, and wide acreage with uniform precipitation.',
+    features: ['Uniform circular water curtain', 'Corrosion & weather-resistant metal spring', 'Ideal for open farm fields & large crops'],
     featured: true
   },
   {
     id: 2,
     name: 'Butterfly / Mini Sprinkler',
     category: 'Irrigation Sprinklers',
-    subtitle: 'Mini Sprinkler • Ideal for Nurseries, Gardens & Plantations',
-    image: '/assets/sprinklers_showcase.jpg',
-    description: 'Compact circular butterfly mini sprinkler providing gentle 360-degree overhead droplet distribution without eroding seedbeds or splashing delicate foliage.',
-    specs: ['Inlet Size: 1/2" Male Thread / Push Fit', 'Coverage: 5 - 8 meters radius', 'Working Pressure: 1.5 - 3.0 Bar', 'Application: Nurseries, Veggie Beds & Tea/Coffee Estates'],
+    subtitle: 'Mini Sprinkler • Ideal for nurseries, gardens and plantations',
+    image: '/assets/prod_butterfly.jpg',
+    description: 'Gentle circular mini sprinkler providing soft overhead droplet distribution without splashing delicate foliage or displacing seedbeds.',
+    features: ['Gentle 360° overhead droplet spray', 'Protects delicate topsoil & young seedlings', 'Ideal for tea, coffee & vegetable nurseries'],
     featured: true
   },
   {
     id: 3,
     name: 'Pop-Up Sprinkler',
     category: 'Irrigation Sprinklers',
-    subtitle: 'Pop-Up Type • Perfect for Lawns & Landscaped Gardens',
-    image: '/assets/sprinklers_showcase.jpg',
-    description: 'Heavy duty retractable pop-up sprinkler body with adjustable arc spray nozzle. Rises smoothly from turf under water pressure and retracts safely below mower level.',
-    specs: ['Pop-Up Height: 4 Inch / 6 Inch', 'Arc Adjustment: 40° to 360° Adjustable', 'Pressure Range: 2.0 - 4.5 Bar', 'Application: Lawns, Golf Courses & Landscaping'],
+    subtitle: 'Pop-Up Type • Perfect for lawns and landscaped gardens',
+    image: '/assets/prod_popup.jpg',
+    description: 'Retractable pop-up gear and spray body that rises flush from turf under water pressure and retracts safely below mower level when off.',
+    features: ['Rises smoothly under water pressure', 'Retracts flush for hassle-free lawn mowing', 'Adjustable spray arc for clean landscape edges'],
     featured: true
   },
   {
     id: 4,
     name: 'Rotary Sprinkler',
     category: 'Irrigation Sprinklers',
-    subtitle: 'Rotary Type • Uniform Water Distribution for Medium to Large Areas',
-    image: '/assets/sprinklers_showcase.jpg',
-    description: 'Multi-arm spinning rotary sprinkler ensuring uniform, wind-resistant precipitation and low application rate to avoid water runoff.',
-    specs: ['Inlet Connection: 3/4" BSP', 'Coverage: 12 - 20 meters diameter', 'Material: UV-Stabilized Polymer & Brass Bushing', 'Application: Medium Farms, Orchards & Lawns'],
+    subtitle: 'Rotary Type • Uniform water distribution for medium to large areas',
+    image: '/assets/prod_rotary.jpg',
+    description: 'Multi-arm spinning rotary sprinkler ensuring even, wind-resistant precipitation and low application rate to eliminate surface runoff.',
+    features: ['Multi-stream spinning rotary coverage', 'Wind-resistant uniform water distribution', 'Gentle precipitation suited for delicate foliage'],
     featured: true
   },
   {
     id: 5,
     name: 'Gear Drive Sprinkler',
     category: 'Irrigation Sprinklers',
-    subtitle: 'Gear Drive Type • Long Range Coverage with Consistent Rainfall',
-    image: '/assets/sprinklers_showcase.jpg',
-    description: 'Enclosed water-lubricated internal gear drive mechanism delivering smooth, silent continuous rotation and uniform water curtain over long throwing distances.',
-    specs: ['Throw Radius: 10 - 18 meters', 'Inlet Size: 3/4" Female Thread', 'Drive Type: Water-Lubricated Gear Drive', 'Application: Large Gardens, Sports Turf & Crops'],
+    subtitle: 'Gear Drive Type • Long range coverage with consistent rainfall',
+    image: '/assets/prod_geardrive.jpg',
+    description: 'Water-lubricated internal gear drive mechanism delivering smooth, silent continuous rotation and uniform water curtain over long throwing distances.',
+    features: ['Smooth & silent enclosed gear rotation', 'Consistent rainfall curtain over long throw', 'Protected internal drive against dirt & debris'],
     featured: true
   },
   {
     id: 6,
     name: 'Rain Gun Sprinkler',
     category: 'Irrigation Sprinklers',
-    subtitle: 'Big Gun Type • High Discharge for Large Farms & Open Fields',
-    image: '/assets/sprinklers_showcase.jpg',
-    description: 'Commercial agricultural rain gun engineered for extensive sugarcane, fodder crops, tea estates, pastures, and dust suppression with interchangeable dual nozzles.',
-    specs: ['Flange/Thread: 1.5" & 2" BSP/Flange', 'Throw Radius: 28 - 50 meters', 'Discharge: 150 - 450 LPM', 'Trajectory: 24° - 28° Angle'],
+    subtitle: 'Big Gun Type • High discharge for large farms and open fields',
+    image: '/assets/prod_raingun.jpg',
+    description: 'High-volume commercial agricultural rain gun engineered for extensive sugarcane, fodder crops, pastures, and open plantations.',
+    features: ['Massive high-discharge water throw', 'Dual interchangeable trajectory nozzles', 'Heavy-duty agricultural alloy & brass construction'],
     featured: true
   },
   {
     id: 7,
     name: 'Micro Sprinkler',
     category: 'Irrigation Sprinklers',
-    subtitle: 'Micro Irrigation • Low Flow, Suitable for Gardens & Nurseries',
-    image: '/assets/sprinklers_showcase.jpg',
-    description: 'Low-volume micro sprinkler with precision rotor designed for delicate seedling nurseries, polyhouses, shade nets, and under-canopy orchard irrigation.',
-    specs: ['Flow Rate: 35 - 120 LPH', 'Operating Pressure: 1.5 - 2.5 Bar', 'Coverage: 3 - 6 meters diameter', 'Mounting: 4mm Micro-tube / Plastic Ground Stake'],
+    subtitle: 'Micro Irrigation • Low flow, suitable for gardens and nurseries',
+    image: '/assets/prod_micro.jpg',
+    description: 'Low-volume micro irrigation sprinkler designed for under-tree orchard watering, polyhouses, shade nets, and sensitive seedling germination.',
+    features: ['Low-flow micro droplet delivery', 'Precision spinning rotor for targeted coverage', 'Easy ground stake mounting for row crops & trees'],
     featured: true
   },
   {
     id: 8,
     name: 'Mist Sprinkler',
     category: 'Irrigation Sprinklers',
-    subtitle: 'Misting Type • Fine Mist for Cooling, Humidity & Nurseries',
-    image: '/assets/sprinklers_showcase.jpg',
-    description: 'High-precision misting nozzle producing fine micronized water droplets for humidity stabilization and cooling in greenhouses, cutting propagation, and poultry farms.',
-    specs: ['Flow Rate: 15 - 30 LPH', 'Droplet Size: Fine Mist (60 - 100 Microns)', 'Pressure Range: 2.5 - 4.0 Bar', 'Application: Greenhouse Climate Control & Cutting Beds'],
+    subtitle: 'Misting Type • Fine mist for cooling, humidity and nurseries',
+    image: '/assets/prod_mist.jpg',
+    description: 'High-precision misting nozzle producing fine micronized water droplets for humidity stabilization and cooling in greenhouses and nurseries.',
+    features: ['Micro-fine cooling water mist', 'Controls ambient humidity in polyhouses', 'Ideal for plant cutting propagation & shade houses'],
     featured: true
   },
   {
     id: 9,
     name: 'Fogger Sprinkler',
     category: 'Irrigation Sprinklers',
-    subtitle: 'Fogging Type • Ultra Fine Mist for Cooling, Humidity Control & Nurseries',
-    image: '/assets/sprinklers_showcase.jpg',
-    description: '4-way cross ultra-fine fogger sprinkler assembly with integrated silicone anti-drip valve preventing post-shutoff dripping. Creates uniform atmospheric moisture.',
-    specs: ['Configuration: 4-Way Cross Head', 'Discharge: 4 x 7.5 LPH', 'Anti-Drip Valve: Integrated Silicone Diaphragm', 'Application: Polyhouses, Hydroponics, Tissue Culture'],
+    subtitle: 'Fogging Type • Ultra fine mist for cooling, humidity control and nurseries',
+    image: '/assets/prod_fogger.jpg',
+    description: '4-way cross ultra-fine fogger sprinkler assembly with integrated silicone anti-drip valve preventing post-shutoff dripping.',
+    features: ['4-way cross ultra-fine fog distribution', 'Integrated anti-drip valve prevents leakage', 'Maintains optimal climate for tissue culture & greens'],
     featured: true
   },
   {
     id: 10,
     name: 'Sprinkler Accessories',
     category: 'Irrigation Sprinklers',
-    subtitle: 'Accessories • Nozzles, Risers, Adaptors, Filters & Mounts',
-    image: '/assets/sprinklers_showcase.jpg',
-    description: 'Comprehensive range of sprinkler mounting accessories including threaded PVC/metal risers, quick-snap hose connectors, replacement nozzles, and mini inline filters.',
-    specs: ['Sizes: 1/2", 3/4", 1" BSP Male & Female', 'Components: Risers, Bushings, Quick Adapters, Washers', 'Material: Forged Brass, POM & UV-Grade PVC', 'Compatibility: Universal Agricultural Sprinklers'],
+    subtitle: 'Accessories • Nozzles, risers, adaptors, filters and more',
+    image: '/assets/prod_sprinkler_acc.jpg',
+    description: 'Complete range of sprinkler mounting accessories including threaded risers, quick-snap hose connectors, replacement nozzles, and mini filters.',
+    features: ['Threaded risers & quick mounting adapters', 'Interchangeable replacement nozzle tips', 'Universal compatibility across agricultural sprinklers'],
     featured: true
   },
 
@@ -114,112 +114,112 @@ export const defaultBrochureProducts = [
   // ==========================================
   {
     id: 11,
-    name: 'PVC Elbows (90° & 45°)',
+    name: 'PVC Elbows',
     category: 'PVC Fittings & Accessories',
-    subtitle: 'Directional Pipe Transitions • High Pressure Resistance',
-    image: '/assets/pvc_fittings_showcase.jpg',
-    description: 'Heavy-duty injection molded PVC 90-degree and 45-degree elbow fittings for directional routing in mainline and sub-mainline irrigation pipelines.',
-    specs: ['Size Range: 20mm to 110mm (1/2" to 4")', 'Pressure Rating: Class 3 (PN10) & Class 4 (PN16)', 'Standard: IS 7834 / ASTM D2466', 'Color: Industrial Grey & Agriculture Blue'],
+    subtitle: 'High Pressure Directional Pipe Bends',
+    image: '/assets/prod_pvc_elbows.jpg',
+    description: 'Heavy-duty injection molded PVC 90-degree and 45-degree elbows for directional routing in mainline and sub-mainline irrigation pipelines.',
+    features: ['High-pressure structural strength', 'Smooth interior for friction-free flow', 'Available in 90° and 45° bends for pressure pipelines'],
     featured: false
   },
   {
     id: 12,
-    name: 'PVC Tees (Equal & Reducing)',
+    name: 'PVC Tees',
     category: 'PVC Fittings & Accessories',
-    subtitle: 'Branch Junctions • Smooth Flow Distribution',
-    image: '/assets/pvc_fittings_showcase.jpg',
+    subtitle: 'Equal & Reducing Branch Junctions',
+    image: '/assets/prod_pvc_tees.jpg',
     description: 'Equal and reducing PVC tees providing smooth flow distribution for mainline branching to secondary irrigation lines and sprinkler risers.',
-    specs: ['Size Range: 20mm to 110mm', 'Type: Socket Weld & Threaded Branch', 'Wall Construction: Heavy Duty Schedule 40/80', 'Application: Mainline Branching & Risers'],
+    features: ['Seamless three-way flow distribution', 'Equal & reducing branching options', 'Heavy-duty wall thickness for farm pipelines'],
     featured: false
   },
   {
     id: 13,
     name: 'PVC Couplers',
     category: 'PVC Fittings & Accessories',
-    subtitle: 'Socket Connectors • Straight Line Pipe Joiners',
+    subtitle: 'Straight Socket Line Joiners',
     image: '/assets/pvc_fittings_showcase.jpg',
-    description: 'Precision molded straight PVC couplers for joining plain end irrigation pressure pipes with solvent cement weld joints.',
-    specs: ['Size Range: 20mm to 160mm', 'Pressure Rating: PN10 & PN16', 'Material: 100% Virgin High-Grade PVC', 'Joint: Solvent Socket Weld'],
+    description: 'Precision molded straight PVC couplers for joining plain end irrigation pressure pipes with permanent solvent cement weld joints.',
+    features: ['High-integrity straight socket joints', 'Resistant to soil chemicals & fertilizers', 'Permanent solvent cement weld sealing'],
     featured: false
   },
   {
     id: 14,
     name: 'PVC Unions',
     category: 'PVC Fittings & Accessories',
-    subtitle: 'Barrel Unions • Quick Disconnect for Maintenance',
-    image: '/assets/pvc_fittings_showcase.jpg',
-    description: 'Three-piece PVC barrel unions with EPDM O-ring seal allowing simple line disconnection for filter cleaning, pump maintenance, and repair without cutting pipes.',
-    specs: ['Size Range: 1/2" to 3" BSP / Metric Socket', 'Sealing: High-Grade EPDM Rubber O-Ring', 'Working Pressure: 10 Bar (150 PSI)', 'Connection: Threaded & Socket'],
+    subtitle: 'Quick Disconnect Barrel Unions',
+    image: '/assets/prod_pvc_tees.jpg',
+    description: 'Three-piece PVC barrel unions with rubber O-ring seal allowing simple line disconnection for pump maintenance and filter cleaning.',
+    features: ['Easy line disconnect without pipe cutting', 'Durable leak-proof O-ring seal', 'Essential for pump manifolds & filter banks'],
     featured: false
   },
   {
     id: 15,
     name: 'PVC Reducers',
     category: 'PVC Fittings & Accessories',
-    subtitle: 'Concentric & Bushing Reducers • Pipe Sizing Transition',
-    image: '/assets/pvc_fittings_showcase.jpg',
-    description: 'Concentric reducers and flush reducer bushings for stepping down pipe diameters from pump discharge mainlines to sub-mains with minimal friction loss.',
-    specs: ['Size Range: 25x20mm up to 110x63mm', 'Type: Concentric Socket & Reducer Bushing', 'Flow: Smooth internal bore minimizing friction loss', 'Material: Virgin PVC'],
+    subtitle: 'Concentric & Bushing Pipe Reducers',
+    image: '/assets/prod_pvc_elbows.jpg',
+    description: 'Concentric reducers and flush reducer bushings for stepping down pipe diameters from pump discharge mainlines to secondary lines.',
+    features: ['Smooth diameter step-down transition', 'Minimizes pressure drops & turbulence', 'Available in concentric and flush bushing styles'],
     featured: false
   },
   {
     id: 16,
     name: 'PVC End Caps',
     category: 'PVC Fittings & Accessories',
-    subtitle: 'Line Termination • High Pressure Pipe Seal Caps',
-    image: '/assets/pvc_fittings_showcase.jpg',
+    subtitle: 'High Pressure Line Termination Caps',
+    image: '/assets/prod_pvc_elbows.jpg',
     description: 'Robust PVC socket and threaded end caps for sealing pipe terminates, flush manifolds, and future pipeline expansion points.',
-    specs: ['Size Range: 20mm to 110mm', 'Type: Plain Solvent Socket & Female Threaded', 'Pressure: Up to 16 Bar', 'Application: Mainline End Sealing & Flushing'],
+    features: ['High pressure termination seal', 'Available in solvent socket & threaded styles', 'Ideal for pipeline flushing manifolds'],
     featured: false
   },
   {
     id: 17,
-    name: 'PVC Valves (Ball Valves)',
+    name: 'PVC Valves',
     category: 'PVC Fittings & Accessories',
-    subtitle: 'Compact Ball Valves • Manual Mainline Flow Control',
-    image: '/assets/pvc_fittings_showcase.jpg',
-    description: 'Smooth quarter-turn PVC compact ball valves with ergonomic red handles and leak-proof PTFE seats for reliable on/off flow isolation in farm networks.',
-    specs: ['Size Range: 1/2" to 4" (Plain & Threaded BSP)', 'Pressure Rating: PN10 (150 PSI)', 'Handle: High-Impact Ergonomic Lever', 'Seals: Chemical Resistant TPV/PTFE'],
+    subtitle: 'Compact Ball Valves with Red Lever Handle',
+    image: '/assets/prod_pvc_valve.jpg',
+    description: 'Smooth quarter-turn PVC compact ball valves with high-visibility red handles and leak-proof seats for reliable flow control.',
+    features: ['Effortless quarter-turn on/off operation', 'High-visibility ergonomic red lever handle', 'Leak-proof internal seal for farm pipelines'],
     featured: false
   },
   {
     id: 18,
-    name: 'Bulldog Solvent Cement',
+    name: 'Solvent Cement',
     category: 'PVC Fittings & Accessories',
-    subtitle: 'Super PVC Solvent • Fast Curing High Pressure Adhesive',
-    image: '/assets/pvc_fittings_showcase.jpg',
-    description: 'Industrial-grade Bulldog Super PVC fast-curing solvent cement formulated for heavy-duty pressure pipe joints in agricultural pipelines, borewells, and irrigation fittings.',
-    specs: ['Packaging: 100ml, 250ml, 500ml, 1 Liter Cans', 'Viscosity: Heavy Bodied Fast Setting', 'Standard: ASTM D-2564 / IS 14182 Compliant', 'Application: High Pressure PVC Irrigation Pipes'],
+    subtitle: 'Bulldog Super PVC High Pressure Solvent Cement',
+    image: '/assets/prod_bulldog_solvent.jpg',
+    description: 'Heavy-duty Bulldog Super PVC fast-curing solvent cement formulated for permanent, chemical-welded joints in irrigation pressure pipes.',
+    features: ['Fast-curing chemical fusion bonding', 'Withstands extreme water pressure spikes', 'Heavy-bodied formula prevents joint leaks'],
     featured: false
   },
   {
     id: 19,
     name: 'PVC Adhesive',
     category: 'PVC Fittings & Accessories',
-    subtitle: 'Heavy Duty Pipe Adhesive • Permanent Leak-Proof Seal',
-    image: '/assets/pvc_fittings_showcase.jpg',
-    description: 'Specialized PVC pipe adhesive providing chemically bonded, waterproof joints resistant to fertilizer salts, fluctuating soil temperatures, and water hammer spikes.',
-    specs: ['Application: Agricultural & Domestic Plumbing', 'Bond Strength: High Shear Resistance', 'Cure Time: Quick Initial Set (10-15 mins)', 'Packaging: Easy Brush-Cap Canister'],
+    subtitle: 'High Strength Irrigation Pipe Adhesive',
+    image: '/assets/prod_bulldog_solvent.jpg',
+    description: 'Specialized PVC pipe adhesive providing chemically bonded, waterproof joints resistant to fertilizer salts and temperature fluctuations.',
+    features: ['High shear strength waterproof bond', 'Resistant to agricultural chemicals & fertilizers', 'Quick initial set for rapid field repairs'],
     featured: false
   },
   {
     id: 20,
-    name: 'Bulldog Gasket Shellac Compound',
+    name: 'Shellac / Gasket Compound',
     category: 'PVC Fittings & Accessories',
-    subtitle: 'Gasket Shellac • Flange & Thread Leak-Proof Compound',
-    image: '/assets/pvc_fittings_showcase.jpg',
-    description: 'Authentic Bulldog Gasket Shellac compound for sealing pump flanges, threaded brass/PVC pipe fittings, gaskets, and preventing stubborn water and air leaks.',
-    specs: ['Packaging: 59ml & 100ml Bottle with Brush', 'Resistance: Water, Oil, Alkalis & Chemicals', 'Application: Threaded Joints, Flanges & Pump Casings', 'Finish: Tough, Flexible, Non-Hardening Seal'],
+    subtitle: 'Bulldog Gasket Shellac Leak-Proof Sealant',
+    image: '/assets/prod_bulldog_shellac.jpg',
+    description: 'Authentic Bulldog Gasket Shellac compound for sealing pump flanges, threaded pipe fittings, gaskets, and preventing fluid leaks.',
+    features: ['Non-hardening flexible leak-proof seal', 'Resistant to water, oils & agricultural chemicals', 'Convenient brush-in-cap applicator bottle'],
     featured: false
   },
   {
     id: 21,
     name: 'Related Connectors & Accessories',
     category: 'PVC Fittings & Accessories',
-    subtitle: 'Adapters & Bushings • Complete Installation Hardware',
+    subtitle: 'Threaded Adapters, Nipples & Tank Connectors',
     image: '/assets/pvc_fittings_showcase.jpg',
-    description: 'Full assortment of PVC male and female threaded adapters (MTA/FTA), tank connectors, barrel nipples, clamp fittings, and line transition accessories.',
-    specs: ['Size Range: 1/2" to 2" BSP Male & Female', 'Thread Standard: Precision BSP Parallel / Tapered', 'Material: Virgin UV-Grade PVC', 'Compatibility: HDPE, PVC & Metal Pipelines'],
+    description: 'Full assortment of PVC male and female threaded adapters, tank connectors, hex nipples, and line transition accessories.',
+    features: ['Precision-machined threaded adapters', 'Seamless transition between PVC, HDPE & metal', 'Durable UV-stabilized virgin polymer'],
     featured: false
   },
 
@@ -228,82 +228,82 @@ export const defaultBrochureProducts = [
   // ==========================================
   {
     id: 22,
-    name: 'PVC Garden Hose',
+    name: 'PVC Garden Hoses',
     category: 'Garden & Plantation Hoses',
-    subtitle: 'Flexible & Lightweight • Multipurpose Watering Hose',
-    image: '/assets/hoses_showcase.jpg',
-    description: 'Flexible green PVC garden hose designed for daily plant watering, landscaping, lawn care, nursery beds, and light domestic washdown.',
-    specs: ['Inner Diameter: 1/2", 3/4", 1"', 'Roll Lengths: 30m, 50m, 100m Rolls', 'Characteristics: Lightweight, non-kinking, all-weather flex', 'Color: Vibrant Emerald Green'],
+    subtitle: 'Lightweight & multipurpose flexible watering hose',
+    image: '/assets/prod_garden_hose.jpg',
+    description: 'Flexible green PVC garden hose designed for daily plant watering, landscaping, lawn care, nursery beds, and general washdown.',
+    features: ['Lightweight & highly flexible', 'All-weather kink-resistant construction', 'Vibrant emerald green UV-protected outer skin'],
     featured: false
   },
   {
     id: 23,
-    name: 'Braided Hose',
+    name: 'Braided Hoses',
     category: 'Garden & Plantation Hoses',
-    subtitle: 'Extra Strength & Durability • Cross-Yarn Reinforced',
-    image: '/assets/hoses_showcase.jpg',
-    description: 'High-tensile cross-braided PVC hose with transparent green outer skin. Resists high water pressure, twisting, crushing, and field abrasion.',
-    specs: ['Inner Diameter: 1/2", 3/4", 1"', 'Working Pressure: 8 - 12 Bar', 'Reinforcement: High-Tenacity Polyester Braided Yarn', 'Temperature Range: -5°C to +65°C'],
+    subtitle: 'Extra strength and durability with reinforced braid',
+    image: '/assets/prod_braided_hose.jpg',
+    description: 'High-tensile cross-braided PVC hose with clear green outer skin. Resists high water pressure, twisting, and field abrasion.',
+    features: ['Cross-braided polyester yarn reinforcement', 'Resists high water pressure & twisting', 'Transparent green skin with visible heavy braid'],
     featured: false
   },
   {
     id: 24,
-    name: 'Jumbo Hose',
+    name: 'Jumbo Hoses',
     category: 'Garden & Plantation Hoses',
-    subtitle: 'Heavy Duty for Agriculture • High Volume Flow Transfer',
-    image: '/assets/hoses_showcase.jpg',
+    subtitle: 'Heavy duty for agriculture use and high volume flow',
+    image: '/assets/prod_jumbo_hose.jpg',
     description: 'Thick-walled heavy duty jumbo agricultural hose capable of handling rigorous field use, farm machinery movement, and high discharge volumes.',
-    specs: ['Sizes: 1", 1.25", 1.5" Inner Diameter', 'Construction: Heavy Duty Thick Wall', 'Application: Commercial Farms, Estates & Plantations', 'Color: Dark Agricultural Green / Black'],
+    features: ['Extra thick heavy-duty wall construction', 'Handles rough farm ground & high volume transfer', 'Crush-resistant all-weather polymer'],
     featured: false
   },
   {
     id: 25,
-    name: '5-Layer Agricultural Spray Hose',
+    name: 'Spray Hoses',
     category: 'Garden & Plantation Hoses',
-    subtitle: 'Power Spray Hose • High Pressure Pesticide & Chemical Spraying',
-    image: '/assets/hoses_showcase.jpg',
-    description: 'Vibrant yellow 5-layer high-pressure spray hose built for tractor-mounted power sprayers, orchard pesticide application, and chemical washdowns.',
-    specs: ['Sizes: 8.5mm & 10mm ID', 'Bursting Pressure: 200 Bar (3000 PSI)', 'Layers: 5-Layer Composite with Dual Braided Polyester', 'Chemical Resistance: Insecticides, Fungicides & Fertilizers'],
+    subtitle: 'Ideal for spraying and garden use (5-Layer high pressure)',
+    image: '/assets/prod_spray_hose.jpg',
+    description: 'Vibrant yellow 5-layer high-pressure spray hose built for tractor power sprayers, orchard pesticide application, and chemical wash.',
+    features: ['5-layer composite with dual yarn braid', 'Extreme burst pressure resistance', 'High chemical resistance to pesticides & fertilizers'],
     featured: false
   },
   {
     id: 26,
-    name: 'Drip Hose',
+    name: 'Drip Hoses',
     category: 'Garden & Plantation Hoses',
-    subtitle: 'Low-Flow Irrigation Hose • Flexible Vegetable & Plant Watering',
-    image: '/assets/hoses_showcase.jpg',
+    subtitle: 'Suitable for low-flow irrigation and vegetable rows',
+    image: '/assets/prod_drip_hose.jpg',
     description: 'Flexible black polyethylene drip hose pipe for delivering water smoothly to low-flow agricultural drippers, stakes, and vegetable beds.',
-    specs: ['Sizes: 12mm & 16mm Outer Diameter', 'Working Pressure: 1.0 - 3.0 Bar', 'UV Protection: Carbon Black UV Inhibitor', 'Application: Row Crops, Nurseries & Raised Beds'],
+    features: ['Flexible smooth delivery for micro irrigation', 'Carbon black UV inhibitor for outdoor lifespan', 'Easy punch-in compatibility for button drippers'],
     featured: false
   },
   {
     id: 27,
-    name: 'Suction Hose',
+    name: 'Suction Hoses',
     category: 'Garden & Plantation Hoses',
-    subtitle: 'Spiral Helix Reinforced • Water Transfer & Pump Suction',
-    image: '/assets/hoses_showcase.jpg',
-    description: 'Heavy-duty green transparent suction hose with embedded rigid PVC spiral helix. Prevents collapse under vacuum during pump suction from rivers and wells.',
-    specs: ['Sizes: 1" to 4" (25mm to 100mm)', 'Vacuum Resistance: 700 mmHg', 'Reinforcement: Helical Rigid PVC Spiral Rib', 'Application: Agricultural Pump Suction & Dewatering'],
+    subtitle: 'For water transfer and pump use (Rigid spiral helix)',
+    image: '/assets/prod_suction_hose.jpg',
+    description: 'Heavy-duty green transparent suction hose with embedded rigid PVC spiral helix preventing collapse under vacuum during pump suction.',
+    features: ['Rigid PVC spiral helix prevents vacuum collapse', 'Transparent green wall allows visual flow check', 'Ideal for agricultural pump intakes & dewatering'],
     featured: false
   },
   {
     id: 28,
-    name: 'Delivery Hose',
+    name: 'Delivery Hoses',
     category: 'Garden & Plantation Hoses',
-    subtitle: 'High Pressure Water Delivery • Field Discharge Hose',
-    image: '/assets/hoses_showcase.jpg',
-    description: 'Reinforced blue agricultural delivery hose designed for pump discharge lines, tank filling, and long-distance water conveyance under pressure.',
-    specs: ['Sizes: 1.5", 2", 2.5", 3"', 'Pressure Rating: 6 - 10 Bar', 'Outer Cover: UV & Abrasion Resistant Blue Polymeric Compound', 'Application: Main Pump Discharge & Farm Water Transfer'],
+    subtitle: 'High pressure water delivery and discharge hose',
+    image: '/assets/prod_delivery_hose.jpg',
+    description: 'Reinforced blue agricultural delivery hose designed for pump discharge lines, tank filling, and long-distance water conveyance.',
+    features: ['High-pressure water discharge capacity', 'Tough abrasion-resistant blue outer skin', 'Flexible routing across farm terrains & ponds'],
     featured: false
   },
   {
     id: 29,
-    name: 'Flat Hose (Layflat Discharge Hose)',
+    name: 'Flat Hoses',
     category: 'Garden & Plantation Hoses',
-    subtitle: 'Layflat Dewatering Hose • Flexible & Compact Storage',
-    image: '/assets/hoses_showcase.jpg',
-    description: 'Heavy-duty blue layflat discharge hose made from synthetic woven fiber encapsulated in PVC. Rolls completely flat for effortless transport and field deployment.',
-    specs: ['Sizes: 2", 2.5", 3", 4", 6" ID', 'Coil Length: 50m / 100m Coils', 'Working Pressure: Up to 6 Bar', 'Storage: Rolls 100% Flat for Easy Relocation'],
+    subtitle: 'Flexible and easy to store layflat discharge hose',
+    image: '/assets/prod_flat_hose.jpg',
+    description: 'Heavy-duty blue layflat discharge hose made from synthetic woven fiber encapsulated in PVC. Rolls completely flat for effortless transport.',
+    features: ['Rolls 100% flat for compact transport & storage', 'High-tensile synthetic fiber reinforcement', 'Fast deployment for emergency dewatering & flood lines'],
     featured: false
   },
 
@@ -314,100 +314,100 @@ export const defaultBrochureProducts = [
     id: 30,
     name: 'Drip Pipes',
     category: 'Drip Irrigation Systems',
-    subtitle: 'Main & Sub-Main Tubing • Smooth Virgin Polyethylene Conduit',
-    image: '/assets/drip_irrigation_showcase.jpg',
-    description: 'Virgin LDPE/LLDPE black drip pipes for main and sub-main irrigation lines. Smooth inner walls prevent chemical buildup and guarantee uniform water pressure.',
-    specs: ['Sizes: 16mm, 20mm, 25mm, 32mm OD', 'Pressure Rating: Class 2 (2.5 Bar) & Class 3 (4 Bar)', 'Standard: IS 12786 Certified', 'UV Protection: UV-Stabilized for 5+ Years Outdoor Life'],
+    subtitle: 'Main & Sub-Main Poly Tubing',
+    image: '/assets/prod_drip_pipeline.jpg',
+    description: 'Virgin polyethylene black drip pipes for main and sub-main irrigation lines. Smooth inner walls prevent chemical buildup.',
+    features: ['Smooth friction-free internal water passage', 'Certified virgin polymer with UV protection', 'Highly flexible layout across uneven farm plots'],
     featured: false
   },
   {
     id: 31,
-    name: 'Drippers (Online Button Drippers)',
+    name: 'Drippers',
     category: 'Drip Irrigation Systems',
-    subtitle: 'Take-Apart Drippers • Targeted Root Zone Irrigation',
-    image: '/assets/drip_irrigation_showcase.jpg',
-    description: 'Color-coded take-apart button drippers delivering measured water volume directly to individual plant root zones. Removable cap allows effortless cleaning.',
-    specs: ['Discharge Rates: 2 LPH, 4 LPH, 8 LPH', 'Type: Take-Apart Turbulent Flow Labyrinth', 'Inlet: 4mm Barbed Punch Connection', 'Application: Potted Plants, Fruit Trees, Vegetables'],
+    subtitle: 'Online Take-Apart Button Drippers',
+    image: '/assets/prod_inline_dripline.jpg',
+    description: 'Color-coded take-apart button drippers delivering measured water volume directly to individual plant root zones. Easy to open and clean.',
+    features: ['Take-apart design for effortless cleaning', 'Turbulent labyrinth prevents silt clogging', 'Direct targeted hydration to plant root zones'],
     featured: false
   },
   {
     id: 32,
     name: 'Inline Drippers',
     category: 'Drip Irrigation Systems',
-    subtitle: 'Pre-Extruded Inline Tubing • Precision Flow for Row Crops',
-    image: '/assets/drip_irrigation_showcase.jpg',
-    description: 'Precision dripline tubing with pre-inserted cylindrical labyrinth drippers at spaced intervals for uniform row crop hydration without manual dripping stakes.',
-    specs: ['Emitter Spacing: 20cm, 30cm, 40cm, 50cm', 'Flow Rate: 2.0 / 4.0 LPH per emitter', 'Wall Thickness: 0.2mm - 0.4mm (8-16 mil)', 'Application: Sugarcane, Vegetables, Banana & Papaya'],
+    subtitle: 'Factory-Integrated Dripper Tubing',
+    image: '/assets/prod_inline_dripline.jpg',
+    description: 'Precision dripline tubing with pre-inserted cylindrical labyrinth drippers at spaced intervals for uniform row crop hydration.',
+    features: ['Pre-inserted inline drippers at fixed spacing', 'Uniform water emission across entire crop row', 'Ideal for sugarcane, banana, papaya & veggies'],
     featured: false
   },
   {
     id: 33,
     name: 'Drip Laterals',
     category: 'Drip Irrigation Systems',
-    subtitle: 'Field Drip Laterals • Thin Wall & Standard Irrigation Coils',
-    image: '/assets/drip_irrigation_showcase.jpg',
-    description: 'High flexibility virgin LLDPE lateral drip line coils engineered for high crack-resistance under intense field sunlight and flexible placement across uneven rows.',
-    specs: ['Diameter: 16mm Outer Diameter', 'Coil Lengths: 250m, 500m, 1000m Coils', 'Anti-Clogging: Wide cross-section turbulent emitter labyrinth', 'Material: Virgin Low Density Polyethylene'],
+    subtitle: 'Field Drip Lateral Coils',
+    image: '/assets/prod_drip_pipeline.jpg',
+    description: 'High flexibility lateral drip line coils engineered for high crack-resistance under intense field sunlight across long crop runs.',
+    features: ['High environmental stress crack resistance', 'UV-stabilized for multi-season field durability', 'Ensures equal pressure along extended row lengths'],
     featured: false
   },
   {
     id: 34,
-    name: 'Emitters (Pressure Compensating - PC)',
+    name: 'Emitters',
     category: 'Drip Irrigation Systems',
-    subtitle: 'PC Emitters • Constant Uniform Flow on Slopes & Long Runs',
-    image: '/assets/drip_irrigation_showcase.jpg',
-    description: 'Pressure compensating emitters equipped with an internal silicone diaphragm ensuring identical discharge rates regardless of undulating terrain or pressure drops.',
-    specs: ['Flow Rates: 4 LPH & 8 LPH Constant Discharge', 'Operating Pressure Range: 0.8 - 4.0 Bar', 'Diaphragm: Medical Grade Silicone', 'Application: Undulating Land, Terraces & Long Lateral Rows'],
+    subtitle: 'Pressure Compensating (PC) Emitters',
+    image: '/assets/prod_inline_dripline.jpg',
+    description: 'Pressure compensating emitters equipped with an internal silicone diaphragm ensuring identical discharge rates on slopes and uneven ground.',
+    features: ['Uniform discharge across slopes & undulating terrain', 'Internal silicone diaphragm self-regulates flow', 'Automatic self-flushing design reduces blockages'],
     featured: false
   },
   {
     id: 35,
     name: 'Drip Connectors',
     category: 'Drip Irrigation Systems',
-    subtitle: 'Barbed Joiners, Tees & Elbows • Tool-Free Quick Push Fit',
-    image: '/assets/drip_irrigation_showcase.jpg',
-    description: 'Complete series of barbed straight joiners, tee connectors, elbows, and lock-nut fittings for quick, leak-proof, tool-free connection of lateral drip pipes.',
-    specs: ['Sizes: 16mm & 20mm Outer Diameter', 'Design: Sharp Deep Barbs for Leak-Proof Hold', 'Material: Engineered UV-Stabilized Polymer', 'Connection: Push-fit Barbed & Threaded Lock Nut'],
+    subtitle: 'Barbed Joiners, Tees & Elbows',
+    image: '/assets/prod_drip_accessories.jpg',
+    description: 'Complete series of barbed straight joiners, tee connectors, elbows, and lock-nut fittings for quick, leak-proof, tool-free connection.',
+    features: ['Sharp deep barbs for leak-proof hold', 'Tool-free quick push-fit installation', 'Tough UV-stabilized polymer construction'],
     featured: false
   },
   {
     id: 36,
-    name: 'Control Valves (Mini Drip Valves)',
+    name: 'Control Valves',
     category: 'Drip Irrigation Systems',
-    subtitle: 'Lateral Isolation Valves • Smooth Red Handle Control',
-    image: '/assets/drip_irrigation_showcase.jpg',
-    description: 'Compact quarter-turn mini ball valves with high-visibility red handles for isolating individual lateral rows or greenhouse drip zones easily.',
-    specs: ['Configurations: 16mm Barb x Barb, 16mm Barb x Thread', 'Working Pressure: Up to 4 Bar', 'Operation: Quarter Turn On/Off', 'Seal: High Integrity Rubber Grommet Seal'],
+    subtitle: 'Mini Drip Ball Valves with Red Lever',
+    image: '/assets/prod_drip_accessories.jpg',
+    description: 'Compact quarter-turn mini ball valves with high-visibility red handles for isolating individual lateral rows or greenhouse drip zones.',
+    features: ['Quarter-turn on/off flow isolation', 'High-visibility red handle for quick inspection', 'Barbed ends for snug fit into drip lateral lines'],
     featured: false
   },
   {
     id: 37,
-    name: 'Filters (Screen & Disc Mainline Filters)',
+    name: 'Filters',
     category: 'Drip Irrigation Systems',
-    subtitle: 'Filtration Units • Anti-Clogging Protection for Emitters',
-    image: '/assets/drip_irrigation_showcase.jpg',
-    description: 'High-capacity agricultural screen and disc water filters preventing sand, silt, and organic matter from clogging fine dripper labyrinths and micro-sprinklers.',
-    specs: ['Inlet/Outlet: 1", 1.5", 2" BSP Male Thread', 'Filtration Rating: 120 Mesh / 130 Micron', 'Flow Capacity: 5 to 30 m³/Hour', 'Cartridge: Cleanable Stainless Steel Screen / Stacked Discs'],
+    subtitle: 'Screen & Disc Mainline Irrigation Filters',
+    image: '/assets/prod_drip_accessories.jpg',
+    description: 'High-capacity agricultural screen and disc water filters preventing sand, silt, and algae from clogging fine drippers and micro-sprinklers.',
+    features: ['High-capacity anti-clogging protection', 'Washable stainless screen & disc elements', 'Essential for drippers, misters & micro-sprinklers'],
     featured: false
   },
   {
     id: 38,
     name: 'Service Saddles',
     category: 'Drip Irrigation Systems',
-    subtitle: 'Mainline Clamping Saddles • Threaded Branch Takeoffs',
-    image: '/assets/drip_irrigation_showcase.jpg',
-    description: 'Two-piece clamp-on service saddles with zinc-plated bolts and EPDM sealing gasket for tapping lateral takeoffs directly from rigid PVC or HDPE mainlines.',
-    specs: ['Mainline Pipe Sizes: 50mm, 63mm, 75mm, 90mm', 'Outlet Female Thread: 1/2", 3/4", 1" BSP', 'Pressure Rating: PN10 / PN16', 'Seal: Molded EPDM O-Ring'],
+    subtitle: 'Mainline Pipe Clamps for Lateral Offtakes',
+    image: '/assets/prod_drip_accessories.jpg',
+    description: 'Two-piece clamp-on service saddles with zinc-plated bolts and EPDM sealing gasket for tapping lateral takeoffs directly from mainlines.',
+    features: ['Two-piece bolt clamp for rigid mainlines', 'Leak-proof molded EPDM sealing gasket', 'Female threaded branch outlet for valves & risers'],
     featured: false
   },
   {
     id: 39,
-    name: 'End Caps & Related Drip Accessories',
+    name: 'End Caps and Related Drip Accessories',
     category: 'Drip Irrigation Systems',
-    subtitle: 'Figure-8 Line Ends, Flush Plugs & Hole Punches',
-    image: '/assets/drip_irrigation_showcase.jpg',
-    description: 'Essential drip network installation accessories including Figure-8 line end closures, flush valves, grommet rubber takeoffs, hole punch tools, and gooseneck stakes.',
-    specs: ['Components: Figure-8 End Caps, Gooseneck Stakes, 4mm Punch Tools', 'Application: Network Flushing, Line Termination & Pipe Securing', 'Material: Virgin UV-Stabilized Polypropylene'],
+    subtitle: 'Figure-8 Line Ends, Stakes & Punches',
+    image: '/assets/prod_drip_accessories.jpg',
+    description: 'Essential drip network installation accessories including Figure-8 line end closures, flush plugs, hole punch tools, and ground stakes.',
+    features: ['Figure-8 closures for fast line flushing', 'Sturdy ground stakes secure lateral lines in place', 'Hole punch tools ensure clean dripper insertion'],
     featured: false
   }
 ];
@@ -447,7 +447,7 @@ export function sendWhatsAppEnquiry(productName, customMsg = '') {
   if (customMsg) {
     message += `Details: ${customMsg}\n`;
   }
-  message += `\nPlease share wholesale pricing, availability, and technical specifications. Thank you!`;
+  message += `\nPlease share wholesale pricing, availability, and product details. Thank you!`;
   
   const encoded = encodeURIComponent(message);
   window.open(`https://wa.me/${phone}?text=${encoded}`, '_blank');
@@ -458,7 +458,8 @@ export function initMobileNav() {
   const hamburger = document.getElementById('nav-hamburger-btn');
   const menu = document.getElementById('nav-menu-list');
   if (hamburger && menu) {
-    hamburger.addEventListener('click', () => {
+    hamburger.addEventListener('click', (e) => {
+      e.stopPropagation();
       menu.classList.toggle('open');
       const icon = hamburger.querySelector('i');
       if (icon) {
@@ -467,6 +468,15 @@ export function initMobileNav() {
         } else {
           icon.className = 'fas fa-bars';
         }
+      }
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
+        menu.classList.remove('open');
+        const icon = hamburger.querySelector('i');
+        if (icon) icon.className = 'fas fa-bars';
       }
     });
   }
