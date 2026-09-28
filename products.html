@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Official Product Catalog | TA TRADING COMPANY</title>
-  <meta name="description" content="Browse our official 39-product irrigation catalog: Irrigation Sprinklers, PVC Fittings & Accessories, Garden & Plantation Hoses, and Drip Irrigation Systems." />
+  <meta name="description" content="Browse our official irrigation catalog: Irrigation Sprinklers, PVC Fittings & Accessories, Garden & Plantation Hoses, and Drip Irrigation Systems." />
   <link rel="stylesheet" href="/src/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
@@ -45,7 +45,7 @@
   <!-- Page Header -->
   <div style="background: linear-gradient(135deg, #07381c 0%, #0d532b 100%); color: white; padding: 44px 0 38px; border-bottom: 1px solid rgba(255,255,255,0.1);">
     <div class="container" style="text-align: center;">
-      <span style="color: #f59e0b; font-weight: 700; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.08em; display: inline-block; margin-bottom: 6px;">Official Product Catalog • 39 Irrigation Solutions</span>
+      <span style="color: #f59e0b; font-weight: 700; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.08em; display: inline-block; margin-bottom: 6px;">Official Product Catalog • Complete Irrigation Solutions</span>
       <h1 style="color: white; font-size: 2.3rem; margin-bottom: 10px;">Explore All Irrigation Products</h1>
       <p style="color: #cbd5e1; max-width: 680px; margin: 0 auto; font-size: 0.98rem; line-height: 1.55;">
         Wholesale inventory of Irrigation Sprinklers, PVC Pressure Fittings & Solvents, Flexible Garden & Plantation Hoses, and Precision Drip Irrigation Systems.
@@ -66,19 +66,19 @@
 
         <div class="category-filter-list">
           <button class="cat-btn active" data-category="all">
-            <i class="fas fa-boxes"></i> All (<span id="count-all">0</span>)
+            <i class="fas fa-boxes"></i> All Products
           </button>
           <button class="cat-btn" data-category="Irrigation Sprinklers">
-            <i class="fas fa-tint"></i> Sprinklers (<span id="count-sprinklers">0</span>)
+            <i class="fas fa-tint"></i> Irrigation Sprinklers
           </button>
           <button class="cat-btn" data-category="PVC Fittings & Accessories">
-            <i class="fas fa-tools"></i> PVC & Solvents (<span id="count-pvc">0</span>)
+            <i class="fas fa-tools"></i> PVC & Solvents
           </button>
           <button class="cat-btn" data-category="Garden & Plantation Hoses">
-            <i class="fas fa-water"></i> Hoses (<span id="count-hoses">0</span>)
+            <i class="fas fa-water"></i> Hoses
           </button>
           <button class="cat-btn" data-category="Drip Irrigation Systems">
-            <i class="fas fa-seedling"></i> Drip Systems (<span id="count-drip">0</span>)
+            <i class="fas fa-seedling"></i> Drip Systems
           </button>
         </div>
       </div>
@@ -199,11 +199,6 @@
     </div>
   </footer>
 
-  <!-- Floating WhatsApp Widget -->
-  <a href="https://wa.me/917510671790?text=Hello%20TA%20TRADING%20COMPANY,%20I%20would%20like%20to%20enquire%20about%20your%20products." target="_blank" class="floating-whatsapp" title="Chat on WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-
   <!-- Mobile Quick Action Sticky Bar -->
   <div class="mobile-bottom-bar">
     <div class="mobile-bottom-bar-inner">
@@ -227,13 +222,6 @@
       const searchInput = document.getElementById('catalog-search');
       const catButtons = document.querySelectorAll('.cat-btn');
       const noResults = document.getElementById('no-results-state');
-
-      // Update Counts
-      document.getElementById('count-all').textContent = catalog.length;
-      document.getElementById('count-sprinklers').textContent = catalog.filter(p => p.category === 'Irrigation Sprinklers').length;
-      document.getElementById('count-pvc').textContent = catalog.filter(p => p.category === 'PVC Fittings & Accessories').length;
-      document.getElementById('count-hoses').textContent = catalog.filter(p => p.category === 'Garden & Plantation Hoses').length;
-      document.getElementById('count-drip').textContent = catalog.filter(p => p.category === 'Drip Irrigation Systems').length;
 
       let selectedCategory = 'all';
 
